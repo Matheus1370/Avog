@@ -1,0 +1,142 @@
+:root{
+    --bg-general: rgb(31, 34, 45);
+    --bg-primary: rgb(19, 21, 28);
+    --bg-secondary: rgb(42,47,66);
+    --bg-slogan: rgb(15,17,17);
+
+    --color-letters: rgb(255, 255, 255);
+    --color-signature: rgba(255, 255, 255, 0.363);
+
+    --line-icons: rgb(33,53,122);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    color: var(--color-letters);
+}
+
+body{
+    background-color: var(--bg-general);
+}
+
+#navbar {
+    width: auto;
+    height: 70px;
+    background-color: var(--bg-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar img{
+    margin: 0 0 -20px -10px;
+    width: 130px;
+}
+
+#banner {
+    width: 100%;
+    margin-bottom: -4px;
+}
+
+#banner img{
+    width: 100%;
+}
+
+.slogan{
+    width: auto;
+    height: 60px;
+    background-color: var(--bg-slogan);
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slogan img{
+    width: 25px;
+    margin-right: 10px;
+    margin-top: -10px;
+}
+
+.slogan p{
+    text-align: justify;
+    width: 50%;
+    font-size: .75rem;
+}
+
+.content{
+    text-align: center;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    min-height: 100px;
+    margin-bottom: 30px;
+    padding: 2rem 2rem 3rem 2rem;
+    background-color: var(--bg-secondary);
+    border-radius: .5rem;
+}
+
+p{
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.titulos{
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    width: 80%;
+    text-align: center;
+}
+
+h2{
+    color: #FFF;
+    font-family: Impact;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+footer {
+    width: auto;
+    height: 120px;
+    padding-top: 2.5rem;
+    background-color: var(--bg-primary);
+    text-align: center;
+}
+
+#links{
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 20px;
+    width: 60%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--line-icons);
+}
+
+#links #left img{
+    margin-left: -20px;
+}
+
+#links #right{
+    width: 105px;
+    margin-right: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#links #right img{
+    width: 25px;
+}
+
+footer p{
+    color: var(--color-signature);
+    font-size: .7rem;
+}
