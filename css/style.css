@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Imprima&display=swap');
+
 :root{
     --bg-general: rgb(31, 34, 45);
     --bg-primary: rgb(19, 21, 28);
@@ -73,7 +75,7 @@ body{
     padding: 2rem 2rem 3rem 2rem;
     background-color: var(--bg-secondary);
     border-radius: .5rem;
-    text-align: justify;
+    text-align: left;
 }
 
 .content .image1{
@@ -86,6 +88,12 @@ body{
     width: 48px;
     margin-bottom: 10px;
     transform: translateX(-5px);
+}
+
+.content p {
+    font-family: "Imprima", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .titulo{
