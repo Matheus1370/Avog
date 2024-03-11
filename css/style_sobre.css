@@ -97,7 +97,7 @@ p{
 h2{
     color: #FFF;
     font-family: Impact;
-    font-size: 25px;
+    font-size: 23px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -142,4 +142,5 @@ footer {
 footer p{
     color: var(--color-signature);
     font-size: .7rem;
+    text-align: center;
 }

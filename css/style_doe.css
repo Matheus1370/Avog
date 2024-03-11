@@ -1,24 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Imprima&display=swap');
 
-:root{
+:root {
     --bg-general: rgb(31, 34, 45);
     --bg-primary: rgb(19, 21, 28);
-    --bg-secondary: rgb(42,47,66);
-    --bg-slogan: rgb(15,17,17);
+    --bg-secondary: rgb(42, 47, 66);
+    --bg-slogan: rgb(15, 17, 17);
 
     --color-letters: rgb(255, 255, 255);
     --color-signature: rgba(255, 255, 255, 0.363);
 
-    --line-icons: rgb(33,53,122);
+    --line-icons: rgb(33, 53, 122);
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     color: var(--color-letters);
 }
 
-body{
+body {
     background-color: var(--bg-general);
 }
 
@@ -31,7 +31,7 @@ body{
     align-items: center;
 }
 
-#navbar img{
+#navbar img {
     margin: 0 0 -20px -10px;
     width: 130px;
 }
@@ -41,34 +41,12 @@ body{
     margin-bottom: -4px;
 }
 
-#banner img{
+#banner img {
     width: 100%;
 }
 
-.slogan{
-    width: auto;
-    height: 60px;
-    background-color: var(--bg-slogan);
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.slogan img{
-    width: 25px;
-    margin-right: 10px;
-    margin-top: -10px;
-}
-
-.slogan p{
-    text-align: justify;
-    width: 50%;
-    font-size: .75rem;
-}
-
-.content{
-    text-align: center;
+.content {
+    text-align: left;
     margin-left: 50%;
     transform: translateX(-50%);
     width: 70%;
@@ -79,12 +57,24 @@ body{
     border-radius: .5rem;
 }
 
-p{
+input, select, input[type="checkbox"] {
+    border-radius: 2px;
+    border: 1px solid #121932;
+    background: #272C40;
+}
+
+label,
+select {
+    display: block;
+    clear: left;
+}
+
+p {
     text-align: justify;
     margin-bottom: 10px;
 }
 
-.titulos{
+.titulos {
     margin-left: 50%;
     transform: translateX(-50%);
     margin-bottom: 15px;
@@ -93,10 +83,10 @@ p{
     text-align: center;
 }
 
-h2{
+h2 {
     color: #FFF;
     font-family: Impact;
-    font-size: 25px;
+    font-size: 23px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -110,7 +100,7 @@ footer {
     text-align: center;
 }
 
-#links{
+#links {
     margin-left: 50%;
     transform: translateX(-50%);
     margin-bottom: 20px;
@@ -122,11 +112,11 @@ footer {
     border-bottom: 1px solid var(--line-icons);
 }
 
-#links #left img{
+#links #left img {
     margin-left: -20px;
 }
 
-#links #right{
+#links #right {
     width: 105px;
     margin-right: 5px;
     margin-bottom: 20px;
@@ -134,11 +124,12 @@ footer {
     justify-content: space-between;
 }
 
-#links #right img{
+#links #right img {
     width: 25px;
 }
 
-footer p{
+footer p {
     color: var(--color-signature);
     font-size: .7rem;
+    text-align: center;
 }
