@@ -1,25 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Imprima&display=swap');
 
-:root{
+:root {
     --bg-general: rgb(31, 34, 45);
     --bg-primary: rgb(19, 21, 28);
-    --bg-secondary: rgb(42,47,66);
-    --bg-slogan: rgb(15,17,17);
+    --bg-secondary: rgb(42, 47, 66);
+    --bg-slogan: rgb(15, 17, 17);
 
     --color-letters: rgb(255, 255, 255);
     --color-signature: rgba(255, 255, 255, 0.363);
 
-    --line-icons: rgb(33,53,122);
+    --line-icons: rgb(33, 53, 122);
+    --buttons: rgba(33, 53, 122, 1);
+    --destaque: rgba(255, 0, 0, 0.795);
+
+    --shadow-first: rgba(0, 0, 0, 0.25);
+    --shadow-second: rgba(0, 0, 0, 0.658);
+    
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     color: var(--color-letters);
 }
 
-body{
+body {
     background-color: var(--bg-general);
+    font-family: Arial, sans-serif;
+    font-family: "Imprima", sans-serif;
 }
 
 #navbar {
@@ -31,60 +39,61 @@ body{
     align-items: center;
 }
 
-#navbar img{
-    margin: 0 0 -20px -10px;
-    width: 130px;
+#navbar img {
+    width: 48px;
 }
 
 #banner {
     width: 100%;
-    margin-bottom: -4px;
+    margin-bottom: 15px;
 }
 
-#banner img{
+#banner img {
     width: 100%;
+    display: block;
+    box-shadow: var(--shadow-first) 0px 13px 27px -5px, var(--shadow-second) 0px 8px 16px -8px;
+    border-radius: 0 0 4% 4%;
 }
 
-.slogan{
-    width: auto;
-    height: 60px;
-    background-color: var(--bg-slogan);
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.slogan img{
-    width: 25px;
-    margin-right: 10px;
-    margin-top: -10px;
-}
-
-.slogan p{
-    text-align: justify;
-    width: 50%;
-    font-size: .75rem;
-}
-
-.content{
+.content {
     text-align: center;
     margin-left: 50%;
     transform: translateX(-50%);
     width: 70%;
     min-height: 100px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     padding: 2rem 2rem 3rem 2rem;
-    background-color: var(--bg-secondary);
     border-radius: .5rem;
 }
 
-p{
-    text-align: justify;
+.content img{
+    width: 140px;
+}
+
+button{
+    text-decoration: none;
+    border: none;
+    text-align: center;
+    justify-content: center;
+    width: 100.75rem 110.25rem;
+    border-radius: 10rem;
+    border-radius: 20%;
+    background-color: var(--buttons);
+}
+
+p {
     margin-bottom: 10px;
 }
 
-.titulos{
+p span{
+    font-weight: bold;
+}
+
+.destaque{
+    color: var(--destaque);
+}
+
+.titulos {
     margin-left: 50%;
     transform: translateX(-50%);
     margin-bottom: 15px;
@@ -93,7 +102,7 @@ p{
     text-align: center;
 }
 
-h2{
+h2 {
     color: #FFF;
     font-family: Impact;
     font-size: 23px;
@@ -110,7 +119,7 @@ footer {
     text-align: center;
 }
 
-#links{
+#links {
     margin-left: 50%;
     transform: translateX(-50%);
     margin-bottom: 20px;
@@ -120,25 +129,22 @@ footer {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--line-icons);
+    padding-bottom: 10px;
 }
 
-#links #left img{
-    margin-left: -20px;
-}
-
-#links #right{
+#links #right {
     width: 105px;
     margin-right: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     display: flex;
     justify-content: space-between;
 }
 
-#links #right img{
+#links #right img {
     width: 25px;
 }
 
-footer p{
+footer p {
     color: var(--color-signature);
     font-size: .7rem;
     text-align: center;

@@ -18,8 +18,10 @@
     color: var(--color-letters);
 }
 
-body{
+body {
     background-color: var(--bg-general);
+    font-family: Arial, sans-serif;
+    font-family: "Imprima", sans-serif;
 }
 
 #navbar {
@@ -32,17 +34,19 @@ body{
 }
 
 #navbar img{
-    margin: 0 0 -20px -10px;
-    width: 130px;
+    width: 48px;
 }
 
 #banner {
     width: 100%;
-    margin-bottom: -4px;
+    margin-bottom: 15px;
 }
 
-#banner img{
+#banner img {
     width: 100%;
+    display: block;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.658) 0px 8px 16px -8px;
+    border-radius: 0 0 4% 4%;
 }
 
 .slogan{
@@ -120,16 +124,13 @@ footer {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--line-icons);
-}
-
-#links #left img{
-    margin-left: -20px;
+    padding-bottom: 10px;
 }
 
 #links #right{
     width: 105px;
     margin-right: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     display: flex;
     justify-content: space-between;
 }

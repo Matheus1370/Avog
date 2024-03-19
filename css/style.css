@@ -1,29 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Imprima&display=swap');
 
-:root{
+:root {
+    /* Cores */
     --bg-general: rgb(31, 34, 45);
     --bg-primary: rgb(19, 21, 28);
-    --bg-secondary: rgb(42,47,66);
-    --bg-slogan: rgb(15,17,17);
-
+    --bg-secondary: rgb(42, 47, 66);
+    --bg-slogan: rgb(15, 17, 17);
     --color-letters: rgb(255, 255, 255);
     --color-signature: rgba(255, 255, 255, 0.363);
-
-    --line-icons: rgb(33,53,122);
+    --line-icons: rgb(33, 53, 122);
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     color: var(--color-letters);
 }
 
-body{
+body {
     background-color: var(--bg-general);
+    font-family: Arial, sans-serif; /* Fallback font */
+    font-family: "Imprima", sans-serif; /* Fonte personalizada */
 }
 
+/* Navbar */
 #navbar {
-    width: auto;
     height: 70px;
     background-color: var(--bg-primary);
     display: flex;
@@ -31,77 +32,71 @@ body{
     align-items: center;
 }
 
-#navbar img{
-    margin: 0 0 -20px -10px;
-    width: 130px;
+#navbar img {
+    width: 48px;
 }
 
-#banner {
+/* Banner */
+#banner img {
     width: 100%;
-    margin-bottom: -4px;
+    display: block;
+    margin: 0;
 }
 
-#banner img{
-    width: 100%;
-}
-
-.slogan{
-    width: auto;
+/* Slogan */
+.slogan {
     height: 60px;
     background-color: var(--bg-slogan);
+    margin-top: -2px;
     margin-bottom: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.slogan img{
+.slogan img {
     width: 25px;
-    margin-right: 10px
+    margin-right: 10px;
 }
 
-.slogan p{
+.slogan p {
     text-align: justify;
     width: 50%;
     font-size: .75rem;
 }
 
-.content{
-    margin-left: 50%;
-    transform: translateX(-50%);
+/* Conteúdo */
+.content {
     width: 70%;
     min-height: 100px;
-    margin-bottom: 30px;
-    padding: 2rem 2rem 3rem 2rem;
+    margin: 0 auto 30px;
+    padding: 2rem;
     background-color: var(--bg-secondary);
     border-radius: .5rem;
     text-align: left;
 }
 
-.content .image1{
+.content .image1 {
     width: 60px;
     margin-bottom: 5px;
-    transform: translateX(-10px);
 }
 
-.content .image2{
+.content .image2 {
     width: 48px;
     margin-bottom: 10px;
-    transform: translateX(-5px);
 }
 
 .content p {
-    font-family: "Imprima", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
-.titulo{
+.titulo {
     text-align: center;
 }
 
-h2{color: #FFF;
-
+h2 {
+    color: #fff;
     font-family: Impact;
     font-size: 23px;
     font-style: normal;
@@ -110,43 +105,37 @@ h2{color: #FFF;
     margin-bottom: 15px;
 }
 
+/* Footer */
 footer {
-    width: auto;
     height: 120px;
     padding-top: 2.5rem;
     background-color: var(--bg-primary);
     text-align: center;
 }
 
-#links{
-    margin-left: 50%;
-    transform: translateX(-50%);
-    margin-bottom: 20px;
+#links {
     width: 60%;
+    margin: 0 auto 20px;
     height: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--line-icons);
+    padding-bottom: 10px;
 }
 
-#links #left img{
-    margin-left: -20px;
-}
-
-#links #right{
+#links #right {
     width: 105px;
     margin-right: 5px;
-    margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
 }
 
-#links #right img{
+#links #right img {
     width: 25px;
 }
 
-footer p{
+footer p {
     color: var(--color-signature);
     font-size: .7rem;
 }

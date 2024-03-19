@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/style_sobre.css">
+    <link rel="stylesheet" href="../css/components/carousel.css">
 </head>
 
 <body>
@@ -13,17 +14,13 @@
     <nav>
         <div id="navbar">
             <p></p>
-            <img class="image" src="../source/icons/Avog.png" alt="Logo_Avog">
+            <img class="image" src="../source/icons/Avog.svg" alt="Logo_Avog">
             <p></p>
         </div>
     </nav>
     <main>
         <div id="banner">
-            <img src="../source/banners/banner_home.png" alt="Imagem_Volei">
-        </div>
-        <div class="slogan">
-            <img src="../source/icons/Star.png">
-            <p>Você, junto com Todo Mundo, pode ajudar a fazer parte disso! Doe Agora!</p>
+            <img src="../source/banners/banner_sobre.svg" alt="Imagem_Volei">
         </div>
 
         <!-- ////////// Conteúdo do Site \\\\\\\\\\-->
@@ -51,8 +48,23 @@
 
         <div class="titulos">
             <h2 class="text_titulo">Galeria</h2>
-
         </div>
+        <div id="carousel">
+            <figure class="icon-cards mt-3">
+                <div class="icon-cards__content">
+                    <div class="icon-cards__item d-flex align-items-center justify-content-center"><img src="../source/carousel/image_1.svg" alt=""></div>
+                    <div class="icon-cards__item d-flex align-items-center justify-content-center"><img src="../source/carousel/image_2.svg" alt=""></div>
+                    <div class="icon-cards__item d-flex align-items-center justify-content-center"><img src="../source/carousel/image_3.svg" alt=""></div>
+                    <div class="icon-cards__item d-flex align-items-center justify-content-center"><img src="../source/carousel/image_4.svg" alt=""></div>
+                    <div class="icon-cards__item d-flex align-items-center justify-content-center"><img src="../source/carousel/image_5.svg" alt=""></div>
+                    <div class="icon-cards__item d-flex align-items-center justify-content-center"><img src="../source/carousel/image_6.svg" alt=""></div>
+                    <div class="icon-cards__item d-flex align-items-center justify-content-center"><img src="../source/carousel/image_7.svg" alt=""></div>
+                    <div class="icon-cards__item d-flex align-items-center justify-content-center"><img src="../source/carousel/image_8.svg" alt=""></div>
+                    <div class="icon-cards__item d-flex align-items-center justify-content-center"><img src="../source/carousel/image_9.svg" alt=""></div>
+                </div>
+            </figure>
+        </div>
+          
     </main>
 
 
@@ -60,17 +72,19 @@
     <footer>
         <div id="links">
             <div id="left">
-                <img src="../source/icons/Avog.png">
+                <img src="../source/icons/Avog.svg">
             </div>
 
             <div id="right">
-                <img src="../source/icons/facebook.png">
-                <img src="../source/icons/instagram.png">
-                <img src="../source/icons/youtube.png">
+                <img src="../source/icons/facebook.svg">
+                <img src="../source/icons/instagram.svg">
+                <img src="../source/icons/youtube.svg">
             </div>
         </div>
         <p>@Copyright - AVOG 2024</p>
     </footer>
+
+    <script src="../js/carousel.js"></script>
 </body>
 
 </html>

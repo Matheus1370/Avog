@@ -13,13 +13,13 @@
     <nav>
         <div id="navbar">
             <p></p>
-            <img class="image" src="../source/icons/Avog.png" alt="Logo_Avog">
+            <img class="image" src="../source/icons/Avog.svg" alt="Logo_Avog">
             <p></p>
         </div>
     </nav>
     <main>
         <div id="banner">
-            <img src="../source/banners/banner_doe.png" alt="Imagem_Volei">
+            <img src="../source/banners/banner_doe.svg" alt="Imagem_Volei">
         </div>
 
         <!-- ////////// Conteúdo do Site \\\\\\\\\\-->
@@ -29,30 +29,34 @@
         <!-- Apresentação -->
         <div class="content">
             <form action="" method="post">
-                <p>Nome</p>
+                <p>Nome <span>*</span></p>
                 <input type="text" name="name">
 
-                <p>Email</p>
+                <p>Email <span>*</span></p>
                 <input type="email" name="email">
 
-                <p>Confirme seu e-mail</p>
+                <p>Confirme seu e-mail <span>*</span></p>
                 <input type="email" name="confirm_email">
 
-                <p>Celular</p>
+                <p>Celular <span>*</span></p>
                 <input type="tel" name="phone">
 
-                <p>Data de Nascimento</p>
+                <p>Data de Nascimento <span>*</span></p>
                 <input type="date" name="dt_nasc">
 
-                <p>Sexo</p>
+                <p>Sexo <span>*</span></p>
                 <select name="sexo" >
+                    <option value="">Selecione</option>
                     <option value="masc">Masculino</option>
                     <option value="fem">Feminino</option>
                     <option value="other">Outro</option>
                 </select>
 
                 
-                <input type="checkbox" name="termo"> <p>Li e aceito as Políticas de Privacidade. (?) *</p>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="terms-checkbox">
+                    <label for="terms-checkbox">Li e aceito as <span>Políticas de Privacidade.*</span></label>
+                </div>
 
                 <input type="button" value="Cadastrar">
             </form>
@@ -65,23 +69,24 @@
         <div class="content">
             <h3>Dados Pessoais</h3>
             <form action="" method="post">
-                <p>Nome</p>
+                <p>Nome <span>*</span></p>
                 <input type="text" name="name">
 
-                <p>Email</p>
+                <p>Email <span>*</span></p>
                 <input type="email" name="email">
 
-                <p>Confirme seu e-mail</p>
+                <p>Confirme seu e-mail <span>*</span></p>
                 <input type="email" name="confirm_email">
 
-                <p>Celular</p>
+                <p>Celular <span>*</span></p>
                 <input type="tel" name="phone">
 
-                <p>Data de Nascimento</p>
+                <p>Data de Nascimento <span>*</span></p>
                 <input type="date" name="dt_nasc">
 
-                <p>Sexo</p>
+                <p>Sexo <span>*</span></p>
                 <select name="sexo" >
+                    <option value="">Selecione</option>
                     <option value="masc">Masculino</option>
                     <option value="fem">Feminino</option>
                     <option value="other">Outro</option>
@@ -89,29 +94,31 @@
 
                 <div class="linha"></div>
 
-                <p>CEP</p>
+                <p>CEP <span>*</span></p>
                 <input type="number" name="cep">
 
-                <p>Rua</p>
+                <p>Rua <span>*</span></p>
                 <input type="text" name="rua">
 
-                <p>Número</p>
+                <p>Número <span>*</span></p>
                 <input type="number" name="numero">
 
                 <p>Complemento</p>
                 <input type="text" name="comp">
 
-                <p>Bairro</p>
+                <p>Bairro <span>*</span></p>
                 <input type="text" name="bairro">
 
-                <p>Cidade</p>
+                <p>Cidade <span>*</span></p>
                 <input type="text" name="cidade">
 
-                <p>Estado</p>
+                <p>Estado <span>*</span></p>
                 <input type="text" name="estado">
-<p></p>
-                <input type="checkbox" name="termo"> <p>Li e aceito as Políticas de Privacidade. (?) *</p>
 
+                <div class="checkbox-container">
+                    <input type="checkbox" id="terms-checkbox">
+                    <label for="terms-checkbox">Li e aceito as <span>Políticas de Privacidade.*</span></label>
+                </div>
                 <input type="button" value="DOE AGORA">
             </form>
         </div>
@@ -122,13 +129,13 @@
     <footer>
         <div id="links">
             <div id="left">
-                <img src="../source/icons/Avog.png">
+                <img src="../source/icons/Avog.svg">
             </div>
 
             <div id="right">
-                <img src="../source/icons/facebook.png">
-                <img src="../source/icons/instagram.png">
-                <img src="../source/icons/youtube.png">
+                <img src="../source/icons/facebook.svg">
+                <img src="../source/icons/instagram.svg">
+                <img src="../source/icons/youtube.svg">
             </div>
         </div>
         <p>@Copyright - AVOG 2024</p>
