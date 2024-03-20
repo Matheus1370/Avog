@@ -9,3 +9,5 @@ https://developers.google.com/maps/documentation/javascript/adding-a-google-map?
 
 Lat & Long 
 -23.467692361661282, -46.5533081332095
+
+https://www.google.com.br/maps/@-23.4661278,-46.5556136,17.14z?entry=ttu
