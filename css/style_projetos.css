@@ -50,28 +50,6 @@ body {
     display: block;
 }
 
-.slogan{
-    width: auto;
-    height: 60px;
-    background-color: var(--bg-slogan);
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.slogan img{
-    width: 25px;
-    margin-right: 10px;
-    margin-top: -10px;
-}
-
-.slogan p{
-    text-align: justify;
-    width: 50%;
-    font-size: .75rem;
-}
-
 .content{
     text-align: center;
     margin-left: 50%;
@@ -84,8 +62,8 @@ body {
     border-radius: .5rem;
 }
 
-p{
-    text-align: justify;
+.content p{
+    text-align: left;
     margin-bottom: 10px;
 }
 

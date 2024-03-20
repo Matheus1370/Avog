@@ -1,0 +1,12 @@
+
+.mapBox{
+    position: relative;
+    width: 600px;
+    height: 500px;
+    background: #fff;
+}
+
+.mapBox iframe{
+    width: 100%;
+    height: 100%;
+}
