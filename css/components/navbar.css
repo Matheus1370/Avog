@@ -23,6 +23,16 @@
     color: var(--color-letters);
 }
 
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 100px;
+    background-color: rgb(42,47,66);
+}
+
 body {
     background-color: var(--bg-general);
     font-family: Arial, sans-serif;

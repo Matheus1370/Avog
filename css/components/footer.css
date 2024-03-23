@@ -7,7 +7,8 @@ footer {
 }
 
 #links {
-    width: 60%;
+    width: 70vw;
+    max-width: 900px;
     margin: 0 auto 20px;
     height: 30px;
     display: flex;
@@ -31,4 +32,22 @@ footer {
 footer p {
     color: var(--color-signature);
     font-size: .7rem;
+}
+
+@media (min-width: 1000px){
+    #links{
+        padding-bottom: 20px;
+    }
+    #links #left img{
+        width: 45px;
+    }
+
+    #links #right {
+        width: 120px;
+    }
+
+    #links #right img {
+        width: 35px;
+    }
+    
 }

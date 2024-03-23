@@ -1,6 +1,6 @@
 #banner {
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 }
 
 #banner img {
@@ -18,7 +18,8 @@
 
 .content {
     text-align: center;
-    width: 70%;
+    width: 70vw;
+    max-width: 440px;
     min-height: 100px;
     margin-bottom: 10px;
     padding: 2rem 2rem 3rem 2rem;
@@ -27,6 +28,7 @@
 
 .content img{
     width: 140px;
+    margin-bottom: 10px;
 }
 
 button{
@@ -53,7 +55,7 @@ p span{
 }
 
 .titulos {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     width: 80%;
     text-align: center;
 }
@@ -67,3 +69,23 @@ h2 {
     line-height: normal;
 }
 
+@media (min-width: 1050px){
+    .content-general{
+        width: 1010px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .content{
+        text-align: center;
+    }
+    .content img{
+        width: 280px;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    p{
+        font-size: 1.2rem;
+    }
+}
