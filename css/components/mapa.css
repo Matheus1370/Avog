@@ -1,12 +1,24 @@
+#mapa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
 
 .mapBox{
     position: relative;
-    width: 600px;
-    height: 500px;
+    width: 70vw;
+    height: 40vh;
+    max-width: 800px;
     background: #fff;
 }
 
 .mapBox iframe{
     width: 100%;
     height: 100%;
+    border: none;
+}
+
+.mapBox, .mapBox iframe{
+    border-radius: 2%;
 }

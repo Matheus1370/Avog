@@ -1,9 +1,10 @@
-#carousel{
+#carousel {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
+
 .icon-cards {
   position: relative;
   width: 40vw;
@@ -14,6 +15,7 @@
   perspective: 1000px;
   transform-origin: center;
 }
+
 .icon-cards__content {
   position: absolute;
   width: 100%;
@@ -34,65 +36,106 @@
   height: 20vw;
   max-width: 380px;
   max-height: 250px;
-  border-radius: 6px;
+  border-radius: 2%;
   transform-origin: center;
 }
-.icon-cards__item img{
+
+.icon-cards__item img {
   width: 40vw;
+  border-radius: 2%;
 }
+
 .icon-cards__item:nth-child(1) {
   transform: rotateY(0) translateZ(50vw);
 }
+
 .icon-cards__item:nth-child(2) {
   transform: rotateY(45deg) translateZ(50vw);
 }
+
 .icon-cards__item:nth-child(3) {
   transform: rotateY(90deg) translateZ(50vw);
 }
+
 .icon-cards__item:nth-child(4) {
   transform: rotateY(135deg) translateZ(50vw);
 }
+
 .icon-cards__item:nth-child(5) {
   transform: rotateY(180deg) translateZ(50vw);
 }
+
 .icon-cards__item:nth-child(6) {
   transform: rotateY(225deg) translateZ(50vw);
 }
+
 .icon-cards__item:nth-child(7) {
   transform: rotateY(270deg) translateZ(50vw);
 }
+
 .icon-cards__item:nth-child(8) {
   transform: rotateY(315deg) translateZ(50vw);
 }
+
 .icon-cards__item:nth-child(9) {
   transform: rotateY(360deg) translateZ(50vw);
 }
+
 @keyframes carousel {
-  0%, 2% {
+
+  0%,
+  2% {
     transform: translateZ(-50vw) rotateY(0);
- }
-  12%, 14% {
+  }
+
+  12%,
+  14% {
     transform: translateZ(-50vw) rotateY(-45deg);
- }
-  24%, 26% {
+  }
+
+  24%,
+  26% {
     transform: translateZ(-50vw) rotateY(-90deg);
- }
-  36%, 38% {
+  }
+
+  36%,
+  38% {
     transform: translateZ(-50vw) rotateY(-135deg);
- }
-  48%, 50% {
+  }
+
+  48%,
+  50% {
     transform: translateZ(-50vw) rotateY(-180deg);
- }
-  60%, 62% {
+  }
+
+  60%,
+  62% {
     transform: translateZ(-50vw) rotateY(-225deg);
- }
-  72%, 74% {
+  }
+
+  72%,
+  74% {
     transform: translateZ(-50vw) rotateY(-270deg);
- }
-  84%, 86% {
+  }
+
+  84%,
+  86% {
     transform: translateZ(-50vw) rotateY(-315deg);
- }
-  98%, 100% {
+  }
+
+  98%,
+  100% {
     transform: translateZ(-50vw) rotateY(-360deg);
- }
+  }
+}
+
+@media (min-width: 1000px) {
+  .icon-cards {
+    max-width: 800px;
+    max-height: 500px;
+  }
+  .icon-cards__item {
+    max-width: 800px;
+    max-height: 500px;
+  }
 }

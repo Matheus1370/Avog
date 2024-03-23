@@ -10,21 +10,22 @@
 }
 
 .wrapper{
-  width: 300px;
+  width: 70vw;
+  max-width: 450px;
   background: rgb(42, 47, 66);
   border-radius: 10px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.12);
 }
-.wrapper header{
+.wrapper .header_callendar{
   display: flex;
   align-items: center;
   padding: 25px 30px 10px;
   justify-content: space-between;
 }
-header .icons{
+.header_callendar .icons{
   display: flex;
 }
-header .icons span{
+.header_callendar .icons span{
   height: 38px;
   width: 38px;
   margin: 0 1px;
@@ -39,10 +40,10 @@ header .icons span{
 .icons span:last-child{
   margin-right: -10px;
 }
-header .icons span:hover{
+.header_callendar .icons span:hover{
   background: rgb(53, 59, 83);
 }
-header .current-date{
+.header_callendar .current-date{
   font-size: 1.45rem;
   font-weight: 500;
 }

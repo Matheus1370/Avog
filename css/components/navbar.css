@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Imprima&display=swap');
+
+:root{
+    --bg-general: rgb(31, 34, 45);
+    --bg-primary: rgb(19, 21, 28);
+    --bg-secondary: rgb(42,47,66);
+    --bg-slogan: rgb(15,17,17);
+
+    --color-letters: rgb(255, 255, 255);
+    --color-signature: rgba(255, 255, 255, 0.363);
+
+    --line-icons: rgb(33,53,122);
+    --destaque: rgba(255, 0, 0, 0.795);
+
+    --shadow-first: rgba(0, 0, 0, 0.25);
+    --shadow-second: rgba(0, 0, 0, 0.658);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: var(--color-letters);
+}
+
+body {
+    background-color: var(--bg-general);
+    font-family: Arial, sans-serif;
+    font-family: "Imprima", sans-serif;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    background-color: var(--bg-primary);
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 40px;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1.15rem;
+    color: #fff;
+    font-weight: 400;
+}
+
+.login-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-button button {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #0187a7;
+}
+
+.login-button button a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    .nav-bar {
+        padding: .5rem 2rem;
+    }
+
+    .nav-item {
+        display: none;
+    }
+
+    .login-button {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile-menu-icon button img{
+        width: 25px;
+    }
+
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 1rem;
+    }
+
+    .mobile-menu .nav-item {
+        display: block;
+        width: 80%;
+        padding-top: 1.2rem;
+        padding-bottom: .5rem;
+        border-bottom: 1px solid rgb(33, 53, 122);
+    }
+
+    .mobile-menu .login-button {
+        display: block;
+        padding: 1rem 2rem;
+    }
+
+    .mobile-menu .login-button button {
+        width: 100%;
+    }
+
+    .open {
+        display: block;
+    }
+}

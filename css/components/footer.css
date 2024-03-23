@@ -1,0 +1,34 @@
+/* Footer */
+footer {
+    height: 120px;
+    padding-top: 2.5rem;
+    background-color: var(--bg-primary);
+    text-align: center;
+}
+
+#links {
+    width: 60%;
+    margin: 0 auto 20px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--line-icons);
+    padding-bottom: 10px;
+}
+
+#links #right {
+    width: 105px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#links #right img {
+    width: 25px;
+}
+
+footer p {
+    color: var(--color-signature);
+    font-size: .7rem;
+}

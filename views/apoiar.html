@@ -4,19 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AVOG - Como Apoiar</title>
+    <link rel="stylesheet" href="../css/components/navbar.css">
+    <link rel="stylesheet" href="../css/components/footer.css">
+    <link rel="stylesheet" href="../css/components/buttons.css">
     <link rel="stylesheet" href="../css/style_apoiar.css">
+    <script src="../js/navbar.js"></script>
 </head>
 
 <body>
     <!-- ////////// Parte inicial do site (fica no topo) \\\\\\\\\\-->
-    <nav>
-        <div id="navbar">
-            <p></p>
-            <img class="image" src="../source/icons/Avog.svg" alt="Logo_Avog">
-            <p></p>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src="../source/icons/Avog.svg" alt="">
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
+                    <li class="nav-item"><a href="projetos.html" class="nav-link">Projetos</a></li>
+                    <li class="nav-item"><a href="apoiar.html" class="nav-link">Como Apoiar</a></li>
+                    <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="login-button">
+                <button><a href="doe.html">DOE AGORA</a></button>
+            </div>
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="../source/icons/hamburgue.svg" alt=""></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
+                <li class="nav-item"><a href="projetos.html" class="nav-link">Projetos</a></li>
+                <li class="nav-item"><a href="apoiar.html" class="nav-link">Como Apoiar</a></li>
+                <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+            </ul>
+            <div class="login-button">
+                <button><a href="doe.html">DOE AGORA</a></button>
+            </div>
         </div>
-    </nav>
+    </header>
     <main>
         <div id="banner">
             <img src="../source/banners/banner_apoiar.svg" alt="Imagem_Volei">
@@ -27,36 +60,35 @@
             <h2 class="text_titulo">Como apoiar?</h2>
         </div>
         <!-- Apresentação -->
-        <div class="content">
-            <img src="../source/icons/heart_red.svg" alt="">
-            <p class="text"><span>Faça uma doação</span> em dinheiro</p>
-            <p class="destaque">Seu apoio é essencial</p>
-            <p class="text">Faça uma doação pontual para a AVOG e ajude-nos a continuar realizando nosso trabalho o ano
-                todo.</p>
-            <button href="#" class="button">DOE AGORA</button>
-        </div>
+        <div class="content-general">
+            <div class="content">
+                <img src="../source/icons/heart_red.svg" alt="">
+                <p class="text"><span>Faça uma doação</span> em dinheiro</p>
+                <p class="destaque">Seu apoio é essencial</p>
+                <p class="text">Faça uma doação pontual para a AVOG e ajude-nos a continuar realizando nosso trabalho o
+                    ano
+                    todo.</p>
+                <button class="buttons">DOE AGORA</button>
+            </div>
 
-        <div class="content">
-            <img src="../source/icons/user_red.svg" alt="">
-            <p class="text">Seja um <span>Voluntário</span></p>
-            <p class="destaque">Apoie a ONG ajudando!</p>
-            <p class="text">Estamos sempre em busca de voluntários engajados que queiram contribuir com seu tempo e
-                habilidades para ajudar em nossos programas e eventos. </p>
-            <button href="#" class="button">DOE AGORA</button>
-        </div>
+            <div class="content">
+                <img src="../source/icons/user_red.svg" alt="">
+                <p class="text">Seja um <span>Voluntário</span></p>
+                <p class="destaque">Apoie a ONG ajudando!</p>
+                <p class="text">Estamos sempre em busca de voluntários engajados que queiram contribuir com seu tempo e
+                    habilidades para ajudar em nossos programas e eventos. </p>
+                <button class="buttons">DOE AGORA</button>
+            </div>
 
-        <div class="content">
-            <img src="../source/icons/users_red.svg" alt="">
-            <p class="text">Ajude na <span>Divulgação</span></p>
-            <p class="destaque">Seu apoio é essencial</p>
-            <p class="text">Ajude-nos a divulgar o trabalho da AVOG compartilhando nossas iniciativas e eventos em suas
-                redes sociais e com sua comunidade. Quanto mais pessoas conhecerem nosso trabalho, maior será nosso
-                impacto na sociedade.</p>
-        </div>
-
-        <div class="titulos">
-            <h2 class="text_titulo">Galeria</h2>
-
+            <div class="content">
+                <img src="../source/icons/users_red.svg" alt="">
+                <p class="text">Ajude na <span>Divulgação</span></p>
+                <p class="destaque">Seu apoio é essencial</p>
+                <p class="text">Ajude-nos a divulgar o trabalho da AVOG compartilhando nossas iniciativas e eventos em
+                    suas
+                    redes sociais e com sua comunidade. Quanto mais pessoas conhecerem nosso trabalho, maior será nosso
+                    impacto na sociedade.</p>
+            </div>
         </div>
     </main>
 
