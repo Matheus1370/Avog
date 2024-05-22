@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<<<<<<< HEAD
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,6 +27,82 @@
         <br>
         <input type="button" onclick="verificar()" value="Salvar">
     </form>
+=======
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVOG - Cadastre-se</title>
+    <link rel="stylesheet" href="../css/components/navbar.css">
+    <link rel="stylesheet" href="../css/components/footer.css">
+    <link rel="stylesheet" href="../css/cadastro.css">
+    <script src="../js/navbar.js"></script>
+</head>
+
+<body>
+    <h1></h1>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src="../source/icons/Avog.svg" alt="">
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
+                    <li class="nav-item"><a href="projetos.html" class="nav-link">Projetos</a></li>
+                    <li class="nav-item"><a href="apoiar.html" class="nav-link">Como Apoiar</a></li>
+                    <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="login-button">
+                <button><a href="doe.html">DOE AGORA</a></button>
+            </div>
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="../source/icons/hamburgue.svg" alt=""></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
+                <li class="nav-item"><a href="projetos.html" class="nav-link">Projetos</a></li>
+                <li class="nav-item"><a href="apoiar.html" class="nav-link">Como Apoiar</a></li>
+                <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+            </ul>
+            <div class="login-button">
+                <button><a href="doe.html">DOE AGORA</a></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="titulos">
+        <h2 class="text_titulo">Cadastre-se</h2>
+    </div>
+
+    <div class="content">
+    <form action="../db/grava.jsp" name="form1" method="post">
+        <label for="nome" class="texto">Nome: </label>
+        <input type="text" name="nome" id="nome" placeholder="Digite seu nome...">
+        <span id="errorNome"></span>
+        <br>
+
+        <label for="email" class="texto">Email: </label>
+        <input type="text" name="email" id="email" placeholder="Digite seu email...">
+        <span id="errorEmail"></span>
+        <br>
+        
+        <label for="senha" class="texto">Senha: </label>
+        <input type="password" name="senha" id="senha" placeholder="Digite sua senha...">
+        <span id="errorSenha"></span>
+        <br>
+
+        <input type="button" onclick="verificar()" value="Salvar">
+    </form>
+</div>
+>>>>>>> 4d63d14c8c83778ee6551e4d9d6d9e49d6dba646
 
     <script src="../js/validacoes/usuario/cadastro.js"></script>
 </body>
