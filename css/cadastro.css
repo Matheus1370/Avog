@@ -56,6 +56,28 @@ input[type="button"]{
     font-size: 18px;
 }
 
+.cadastro-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cadastro-button button {
+    border: none;
+    margin-top: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #143c86;
+}
+
+.cadastro-button button a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+
 input[type="button"]:hover,
 input[type="button"]:focus {
     background-color: #16437E;
