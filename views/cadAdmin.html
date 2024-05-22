@@ -41,7 +41,7 @@
                 <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
             </ul>
             <div class="login-button">
-                <button><a href="doe.html">ENTRAR</a></button>
+                <button><a href="login.html">ENTRAR</a></button>
             </div>
         </div>
     </header>
@@ -53,18 +53,18 @@
     <div class="content">
     <form action="/db/grava2.jsp" name="form1" method="post">
         <label for="nome">Nome: </label>
-        <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
-        <span id="errorNome"></span>
+        <input type="text" name="nome" id="nome" placeholder="Digite seu nome...">
+        <span id="errorNome" class="spam"></span>
         <br>
         
         <label for="email">Email: </label>
-        <input type="text" name="email" id="email" placeholder="Digite seu email">
-        <span id="errorEmail"></span>
+        <input type="text" name="email" id="email" placeholder="Digite seu email...">
+        <span id="errorEmail" class="spam"></span>
         <br>
 
         <label for="senha">Senha: </label>
-        <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
-        <span id="errorSenha"></span>
+        <input type="password" name="senha" id="senha" placeholder="Digite sua senha...">
+        <span id="errorSenha" class="spam"></span>
         <br>
 
         <label for="cargo">Cargo: </label>
@@ -75,7 +75,7 @@
             <option value="2">Secretário</option>
         </select>
         
-        <span id="errorCargo"></span>
+        <span id="errorCargo" class="spam"></span>
         <br>
         <input type="button" onclick="verificar()" value="Salvar">
     </form>
