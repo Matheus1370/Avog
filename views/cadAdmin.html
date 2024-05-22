@@ -7,7 +7,47 @@
     <link rel="stylesheet" href="../css/organizador/cadAdmin.css">
 </head>
 <body>
-    <div 
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src="../source/icons/Avog.svg" alt="">
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
+                    <li class="nav-item"><a href="projetos.html" class="nav-link">Projetos</a></li>
+                    <li class="nav-item"><a href="apoiar.html" class="nav-link">Como Apoiar</a></li>
+                    <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="login-button">
+                <button><a href="doe.html">DOE AGORA</a></button>
+            </div>
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="../source/icons/hamburgue.svg" alt=""></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
+                <li class="nav-item"><a href="projetos.html" class="nav-link">Projetos</a></li>
+                <li class="nav-item"><a href="apoiar.html" class="nav-link">Como Apoiar</a></li>
+                <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+            </ul>
+            <div class="login-button">
+                <button><a href="doe.html">DOE AGORA</a></button>
+            </div>
+        </div>
+    </header>
+
+   <div class="titulos">
+        <h2 class="text_titulo">Conta de Administrador</h2>
+    </div>
+
     <form action="/db/grava2.jsp" name="form1" method="post">
         <label for="nome">Nome: </label>
         <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
@@ -28,6 +68,7 @@
             <option value="2">Vice</option>
             <option value="2">Secretário</option>
         </select>
+        
         <span id="errorCargo"></span>
         <br>
         <input type="button" onclick="verificar()" value="Salvar">
