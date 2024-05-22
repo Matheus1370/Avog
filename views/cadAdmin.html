@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AVOG - Cadastro Organizador</title>
     <link rel="stylesheet" href="../css/organizador/cadAdmin.css">
+    <link rel="stylesheet" href="../css/components/navbar.css">
+    <link rel="stylesheet" href="../css/components/footer.css">
 </head>
 <body>
     <header>
@@ -23,7 +25,7 @@
             </div>
 
             <div class="login-button">
-                <button><a href="doe.html">DOE AGORA</a></button>
+                <button><a href="login.html">ENTRAR</a></button>
             </div>
 
             <div class="mobile-menu-icon">
@@ -39,7 +41,7 @@
                 <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
             </ul>
             <div class="login-button">
-                <button><a href="doe.html">DOE AGORA</a></button>
+                <button><a href="doe.html">ENTRAR</a></button>
             </div>
         </div>
     </header>
@@ -48,6 +50,7 @@
         <h2 class="text_titulo">Conta de Administrador</h2>
     </div>
 
+    <div class="content">
     <form action="/db/grava2.jsp" name="form1" method="post">
         <label for="nome">Nome: </label>
         <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
@@ -64,7 +67,7 @@
         <span id="errorSenha"></span>
         <br>
 
-        <label for="cargo">Senha: </label>
+        <label for="cargo">Cargo: </label>
         <select name="cargo" id="cargo">
             <option value="">Selecione</option>
             <option value="1">Presidente</option>
@@ -76,7 +79,7 @@
         <br>
         <input type="button" onclick="verificar()" value="Salvar">
     </form>
-
+</div>
         <script src="../js/validacoes/organizador/cadAdmin.js"></script>
 </body>
 </html>
