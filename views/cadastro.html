@@ -29,7 +29,7 @@
             </div>
 
             <div class="login-button">
-                <button><a href="doe.html">DOE AGORA</a></button>
+                <button><a href="login.html">ENTRAR</a></button>
             </div>
 
             <div class="mobile-menu-icon">
@@ -58,22 +58,22 @@
     <form action="../db/grava.jsp" name="form1" method="post">
         <label for="nome" class="texto">Nome: </label>
         <input type="text" name="nome" id="nome" placeholder="Digite seu nome...">
-        <span id="errorNome"></span>
+        <span id="errorNome" class="spam"></span>
         <br>
 
         <label for="email" class="texto">Email: </label>
         <input type="text" name="email" id="email" placeholder="Digite seu email...">
-        <span id="errorEmail"></span>
+        <span id="errorEmail" class="spam"></span>
         <br>
         
         <label for="senha" class="texto">Senha: </label>
         <input type="password" name="senha" id="senha" placeholder="Digite sua senha...">
-        <span id="errorSenha"></span>
+        <span id="errorSenha" class="spam"></span>
         <br>
 
         <label for="confirmSenha">Confirme sua senha: </label>
         <input type="password" name="confirmeSenha" id="confirmeSenha" placeholder="Confirme sua senha...">
-        <span id="errorConfirmeSenha"></span>
+        <span id="errorConfirmeSenha" class="spam"></span>
         <br>
 
         <input type="button" onclick="verificar()" value="Salvar">
