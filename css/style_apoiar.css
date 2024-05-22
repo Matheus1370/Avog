@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #banner {
     width: 100%;
     margin-bottom: 30px;
@@ -9,6 +10,8 @@
     box-shadow: var(--shadow-first) 0px 13px 27px -5px, var(--shadow-second) 0px 8px 16px -8px;
 }
 
+=======
+>>>>>>> 97ccc06 (css cadastro)
 .content-general{
     display: flex;
     flex-direction: column;
