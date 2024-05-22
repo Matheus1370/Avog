@@ -1,4 +1,5 @@
 function verificar(){
+    Limpar();
     var enviar = true;
     var nome = document.getElementById("nome");
     var email = document.getElementById("email");
@@ -13,7 +14,7 @@ function verificar(){
     if( email.value.length == 0){
         enviar = false;
         document.querySelector("#errorEmail").textContent = "Preencha o campo email!";
-    }else if(email.value.indexOf("@") < 0){
+    }else if(email.value.indexOf("@") < 0 || email.value.includes(".com") == false && email.value.includes(".br") == false){
         enviar = false;
         document.querySelector("#errorEmail").textContent = "Digite um email válido!";
     }
@@ -28,8 +29,21 @@ function verificar(){
         document.querySelector("#errorCargo").textContent = "Selecione um cargo";
     }
 
+    if(confirmeSenha.value != senha.value){
+        enviar = false;
+        document.querySelector("#errorConfirmeSenha").textContent = "Digite a mesma senha";
+    }
+
     if(enviar){
         document.form1.submit();
     }
 
+}
+
+function Limpar(){
+    document.querySelector("#errorNome").textContent = "";
+    document.querySelector("#errorEmail").textContent = "";
+    document.querySelector("#errorSenha").textContent = "";
+    document.querySelector("#errorConfirmeSenha").textContent = "";
+    document.querySelector("#errorCargo").textContent = "";
 }

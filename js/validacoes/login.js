@@ -1,4 +1,5 @@
 function verificar(){
+    Limpar();
     var enviar = true;
     var email = document.getElementById("email");
     var senha = document.getElementById("senha");
@@ -6,7 +7,7 @@ function verificar(){
     if( email.value.length == 0){
         enviar = false;
         document.querySelector("#errorEmail").textContent = "Preencha o campo email!";
-    }else if(email.value.indexOf("@") < 0){
+    }else if(email.value.indexOf("@") < 0 || email.value.includes(".com") == false && email.value.includes(".br") == false){
         enviar = false;
         document.querySelector("#errorEmail").textContent = "Digite um email válido!";
     }
@@ -26,4 +27,9 @@ function verificar(){
         document.form1.submit();
     }
 
+}
+
+function Limpar(){
+    document.querySelector("#errorEmail").textContent = "";
+    document.querySelector("#errorSenha").textContent = "";
 }
