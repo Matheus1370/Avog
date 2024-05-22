@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVOG - Cadastro Organizador</title>
+    <link rel="stylesheet" href="../css/organizador/cadAdmin.css">
+</head>
+<body>
+    <form action="/db/grava2.jsp" name="form1" method="post">
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
+        <span id="errorNome"></span>
+        <br>
+        <label for="email">Email: </label>
+        <input type="text" name="email" id="email" placeholder="Digite seu email">
+        <span id="errorEmail"></span>
+        <br>
+        <label for="senha">Senha: </label>
+        <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
+        <span id="errorSenha"></span>
+        <br>
+        <label for="cargo">Senha: </label>
+        <select name="cargo" id="cargo">
+            <option value="">Selecione</option>
+            <option value="1">Presidente</option>
+            <option value="2">Vice</option>
+            <option value="2">Secretário</option>
+        </select>
+        <span id="errorCargo"></span>
+        <br>
+        <input type="button" onclick="verificar()" value="Salvar">
+    </form>
+
+        <script src="../js/validacoes/organizador/cadAdmin.js"></script>
+</body>
+</html>
