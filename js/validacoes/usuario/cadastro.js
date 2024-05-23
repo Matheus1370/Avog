@@ -40,4 +40,10 @@ function Limpar(){
     document.querySelector("#errorEmail").textContent = "";
     document.querySelector("#errorSenha").textContent = "";
     document.querySelector("#errorConfirmeSenha").textContent = "";
+
+    nome.style.borderBottomColor = "#00ff2a";
+    email.style.borderBottomColor = "#00ff2a";
+    senha.style.borderBottomColor = "#00ff2a";
+    confirmeSenha.style.borderBottomColor = "#00ff2a";
+    
 }

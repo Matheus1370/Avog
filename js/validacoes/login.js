@@ -32,4 +32,8 @@ function verificar(){
 function Limpar(){
     document.querySelector("#errorEmail").textContent = "";
     document.querySelector("#errorSenha").textContent = "";
+
+    email.style.borderBottomColor = "#00ff2a";
+    senha.style.borderBottomColor = "#00ff2a";
+    
 }
