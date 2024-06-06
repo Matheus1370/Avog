@@ -16,11 +16,11 @@
             </div>
             <div class="nav-list">
                 <ul>
-                    <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
-                    <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
-                    <li class="nav-item"><a href="projetos.html" class="nav-link">Projetos</a></li>
-                    <li class="nav-item"><a href="apoiar.html" class="nav-link">Como Apoiar</a></li>
-                    <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+                    <li class="nav-item"><a href="../index.html" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="../sobre.html" class="nav-link">Sobre</a></li>
+                    <li class="nav-item"><a href="../projetos.html" class="nav-link">Projetos</a></li>
+                    <li class="nav-item"><a href="../apoiar.html" class="nav-link">Como Apoiar</a></li>
+                    <li class="nav-item"><a href="../contato.html" class="nav-link">Contato</a></li>
                 </ul>
             </div>
 
@@ -51,7 +51,7 @@
     </div>
 
     <div class="content">
-    <form action="/db/grava2.jsp" name="form1" method="post">
+    <form action="/db/cadAdmin.jsp" name="form1" method="post">
         <label for="nome">Nome: </label>
         <input type="text" name="nome" id="nome" placeholder="Digite seu nome...">
         <span id="errorNome" class="spam"></span>
@@ -77,11 +77,11 @@
             <option value="">Selecione</option>
             <option value="1">Presidente</option>
             <option value="2">Vice</option>
-            <option value="2">Secretário</option>
+            <option value="3">Secretário</option>
         </select>
-        
         <span id="errorCargo" class="spam"></span>
         <br>
+
         <input type="button" onclick="verificar()" value="Salvar">
     </form>
 </div>
