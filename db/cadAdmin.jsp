@@ -1,4 +1,7 @@
-<%@ page import = "java.io.*", "java.util.*"%>
+<%@ page import="java.sql.*, java.time.*, java.util.*" %>
+<%@ include file="conexao.jsp" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
 
 <%
     // cria as variáveis das informações

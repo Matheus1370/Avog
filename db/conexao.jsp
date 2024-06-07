@@ -1,3 +1,4 @@
+<% //Conexão com o banco%>
 <%@page language="java" import="java.sql.*" %>
 
 <%
