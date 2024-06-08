@@ -1,18 +1,22 @@
+<%@ page import="java.sql.*, java.time.*, java.util.*" %>
+<%@ include file="../../db/conexao.jsp" %>
+<% if(session.getAttribute("organizador_id") == null ){response.sendRedirect("../../db/restrito.jsp");}%>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AVOG - Cadastro Organizador</title>
-    <link rel="stylesheet" href="../css/organizador/cadAdmin.css">
-    <link rel="stylesheet" href="../css/components/navbar.css">
-    <link rel="stylesheet" href="../css/components/footer.css">
+    <link rel="stylesheet" href="../../css/organizador/cadAdmin.css">
+    <link rel="stylesheet" href="../../css/components/navbar.css">
+    <link rel="stylesheet" href="../../css/components/footer.css">
 </head>
 <body>
     <header>
         <nav class="nav-bar">
             <div class="logo">
-                <img src="../source/icons/Avog.svg" alt="">
+                <img src="../../source/icons/Avog.svg" alt="">
             </div>
             <div class="nav-list">
                 <ul>
@@ -25,11 +29,11 @@
             </div>
 
             <div class="login-button">
-                <button><a href="login.html">ENTRAR</a></button>
+                <button><a href="../../db/logout.jsp">Sair</a></button>
             </div>
 
             <div class="mobile-menu-icon">
-                <button onclick="menuShow()"><img class="icon" src="../source/icons/hamburgue.svg" alt=""></button>
+                <button onclick="menuShow()"><img class="icon" src="../../source/icons/hamburgue.svg" alt=""></button>
             </div>
         </nav>
         <div class="mobile-menu">
@@ -51,7 +55,7 @@
     </div>
 
     <div class="content">
-    <form action="/db/cadAdmin.jsp" name="form1" method="post">
+    <form action="../../db/cadAdmin.jsp" name="form1" method="post">
         <label for="nome">Nome: </label>
         <input type="text" name="nome" id="nome" placeholder="Digite seu nome...">
         <span id="errorNome" class="spam"></span>
@@ -85,6 +89,6 @@
         <input type="button" onclick="verificar()" value="Salvar">
     </form>
 </div>
-        <script src="../js/validacoes/organizador/cadAdmin.js"></script>
+        <script src="../../js/validacoes/organizador/cadAdmin.js"></script>
 </body>
 </html>

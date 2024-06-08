@@ -1,5 +1,7 @@
-<% //Conexão com o banco%>
+<% //Conexão com o banco 
+%>
 <%@page language="java" import="java.sql.*" %>
+<%@ page import="java.time.ZoneId" %>
 
 <%
     //variaveis para o banco de dados

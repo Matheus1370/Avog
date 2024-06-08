@@ -11,7 +11,7 @@
     String vsenha = request.getParameter("senha");
     int vcargo = Integer.parseInt(request.getParameter("cargo"));
 
-    String sql = "insert into organizador (nome, email, senha) values (?,?,?);";
+    String sql = "insert into organizador (nome, email, senha, cargo) values (?,?,?,?);";
 
     PreparedStatement stm = conexao.prepareStatement(sql);
 

@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="../css/components/navbar.css">
     <link rel="stylesheet" href="../css/components/footer.css">
     <link rel="stylesheet" href="../css/cadastro.css">
+        
     <script src="../js/navbar.js"></script>
 </head>
 
 <body>
-    <h1></h1>
     <header>
         <nav class="nav-bar">
             <div class="logo">
@@ -56,6 +56,7 @@
 
     <div class="content">
     <form action="../db/login.jsp" name="form1" method="post">
+        <span id="errorLogin" class="spam" style="display: none;"></span>
         <label for="email" class="texto">Email: </label>
         <input type="text" name="email" id="email" placeholder="Digite seu email...">
         <span id="errorEmail" class="spam"></span>

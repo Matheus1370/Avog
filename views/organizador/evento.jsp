@@ -1,6 +1,7 @@
-<%@ page import="java.sql.*, java.time.*, java.util.*" %>
+<%@ page import="java.sql.*, java.text.*, java.time.*" %>
 <%@ include file="../../db/conexao.jsp" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<% if(session.getAttribute("organizador_id") == null ){response.sendRedirect("../../db/restrito.jsp");}%>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -35,7 +36,7 @@
             </div>
 
             <div class="login-button">
-                <button><a href="login.html">ENTRAR</a></button>
+                <button><a href="../../db/logout.jsp">Sair</a></button>
             </div>
 
             <div class="mobile-menu-icon">
@@ -51,7 +52,7 @@
                 <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
             </ul>
             <div class="login-button">
-                <button><a href="login.html">ENTRAR</a></button>
+                <button><a href="../../db/logout.jsp">Sair</a></button>
             </div>
         </div>
     </header>
@@ -81,14 +82,20 @@
             PreparedStatement stm = conexao.prepareStatement(consulta);
             stm.setDate(1, java.sql.Date.valueOf(date));
             ResultSet dados = stm.executeQuery();
+            SimpleDateFormat sdfFormatado = new SimpleDateFormat("dd/MM/yyyy");
         %>
         <div class="caixa">
-            <% while(dados.next()) { %>
+            <% while(dados.next()) {
+                String databanco = dados.getString("data");
+                Date data = java.sql.Date.valueOf(databanco);
+                String dataFormatada = sdfFormatado.format(data);
+
+                %>
                 <div class="card">
                     <input type="hidden" name="id_evento" value="<%= dados.getString("id_evento") %>">
                     <p><%= dados.getString("nome") %></p>
                     <p><%= dados.getString("descricao") %></p>
-                    <p><%= dados.getString("data") %></p>
+                    <p><%= dataFormatada %></p>
                     <p><%= dados.getString("hora") %></p>
                 </div>
             <% } %>
@@ -103,12 +110,15 @@
             ResultSet dados2 = stm2.executeQuery();
         %>
         <div class="caixa">
-            <% while(dados2.next()) { %>
+            <% while(dados2.next()) { 
+                String databanco2 = dados2.getString("data");
+                Date data2 = java.sql.Date.valueOf(databanco2);
+                String dataFormatada2 = sdfFormatado.format(data2);%>
                 <div class="card">
                     <input type="hidden" name="id_evento" value="<%= dados2.getString("id_evento") %>">
                     <p><%= dados2.getString("nome") %></p>
                     <p><%= dados2.getString("descricao") %></p>
-                    <p><%= dados2.getString("data") %></p>
+                    <p><%= dataFormatada2 %></p>
                     <p><%= dados2.getString("hora") %></p>
                 </div>
             <% } %>
@@ -116,14 +126,14 @@
     </div>
 
     <div id="criarEvento" class="evento">
-        <form action="../db/cadastro.jsp" name="form1" method="post">
+        <form action="../../db/cadEvento.jsp" name="form1" method="post">
             <label for="nome" class="texto">Nome: </label>
             <input type="text" name="nome" id="nome" placeholder="Digite seu nome...">
             <span id="errorNome" class="spam"></span>
             <br>
 
             <label for="descricao" class="texto">Descrição: </label>
-            <textarea name="descricao" id="descricao" cols="30" rows="10" placeholder="Digite uma descrição..."></textarea>
+            <textarea name="descricao" id="descricao" cols="30" rows="10" ></textarea>
             <span id="errorDescricao" class="spam"></span>
             <br>
             

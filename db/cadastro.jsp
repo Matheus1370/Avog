@@ -16,11 +16,7 @@
     stm.setString( 3, vsenha );
 
     stm.execute();
-    if(stm.execute())
-    {
-        stm.close();
-        response.sendRedirect("/views/cadastro.html");
-    }
     stm.close();
+    response.sendRedirect("../views/cadastro.html");
     
 %>

@@ -1,3 +1,23 @@
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+var loginError = getParameterByName('loginError');
+if (loginError === 'true') {
+// Se houver um erro de login, mostra a mensagem de erro
+var errorSpan = document.getElementById('errorLogin');
+if (errorSpan) {
+errorSpan.textContent = 'Email ou senha incorretos.';
+errorSpan.style.display = 'flex';
+errorSpan.style.justifyContent = 'center';
+errorSpan.style.fontSize = '15px';
+}
+}
 function verificar(){
     Limpar();
     var enviar = true;
@@ -16,12 +36,6 @@ function verificar(){
         enviar = false;
         document.querySelector("#errorSenha").textContent = "Digite pelo menos 8 caracteres!";
     }
-    //futuramente validações com o banco de dados e a requisição da página como,
-    // nome digitado é o mesmo que o nome do banco de dados? e o mesmo vale para a senha
-
-    // fazendo também dupla verificação de email e senha vendo se estão 
-    //cadastrados na tabela do usuário senão verifica na tabela do 
-    //organizador senão retorna mensagem
 
     if(enviar){
         document.form1.submit();

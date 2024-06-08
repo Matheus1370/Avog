@@ -17,79 +17,56 @@ function selecao(event, divId) {
     } else {
         console.error('Div não encontrada: ' + divId);
     }
-    return false; // Impede a navegação do link
-}
-
-// Função para validar o campo de nome
-function validarNome() {
-    var nomeInput = document.getElementById('nome');
-    var nome = nomeInput.value.trim();
-    var errorSpan = document.getElementById('errorNome');
-
-    if (nome === '') {
-        errorSpan.textContent = 'Por favor, insira seu nome.';
-        nomeInput.focus();
-        return false;
-    } else {
-        errorSpan.textContent = '';
-        return true;
-    }
-}
-
-// Função para validar o campo de descrição
-function validarDescricao() {
-    var descricaoInput = document.getElementById('descricao');
-    var descricao = descricaoInput.value.trim();
-    var errorSpan = document.getElementById('errorDescricao');
-
-    if (descricao === '') {
-        errorSpan.textContent = 'Por favor, insira uma descrição.';
-        descricaoInput.focus();
-        return false;
-    } else {
-        errorSpan.textContent = '';
-        return true;
-    }
-}
-
-// Função para validar o campo de data
-function validarData() {
-    var dataInput = document.getElementById('data');
-    var data = dataInput.value.trim();
-    var errorSpan = document.getElementById('errorData');
-
-    if (data === '') {
-        errorSpan.textContent = 'Por favor, insira a data do evento.';
-        dataInput.focus();
-        return false;
-    } else {
-        errorSpan.textContent = '';
-        return true;
-    }
-}
-
-// Função para validar o campo de hora
-function validarHora() {
-    var horaInput = document.getElementById('hora');
-    var hora = horaInput.value.trim();
-    var errorSpan = document.getElementById('errorHora');
-
-    if (hora === '') {
-        errorSpan.textContent = 'Por favor, insira a hora do evento.';
-        horaInput.focus();
-        return false;
-    } else {
-        errorSpan.textContent = '';
-        return true;
-    }
 }
 
 // Função para verificar todas as validações antes de enviar o formulário
 function verificar() {
-    var nomeValido = validarNome();
-    var descricaoValida = validarDescricao();
-    var dataValida = validarData();
-    var horaValida = validarHora();
+    Limpar();
+    var enviar = true;
+    var nomeInput = document.getElementById('nome');
+    var nome = nomeInput.value.trim();
+    var descricaoInput = document.getElementById('descricao');
+    var descricao = descricaoInput.value.trim();
+    var dataInput = document.getElementById('data');
+    var data = dataInput.value.trim();
+    var horaInput = document.getElementById('hora');
+    var hora = horaInput.value.trim();
 
-    return nomeValido && descricaoValida && dataValida && horaValida;
+
+    // Função para validar o campo de nome
+    if (nome === '') {
+        enviar = false;
+        document.querySelector('#errorNome').textContent = 'Por favor, insira seu nome.';
+        nomeInput.focus();
+    }
+    // Função para validar o campo de descrição
+    if (descricao === '') {
+        enviar = false;
+        document.querySelector('#errorDescricao').textContent = 'Por favor, insira uma descrição.';
+        descricaoInput.focus();
+    }
+
+    // Função para validar o campo de data
+    if (data === '') {
+        enviar = false;
+        document.querySelector('#errorData').textContent = 'Por favor, insira a data do evento.';
+        dataInput.focus();
+    }
+
+    // Função para validar o campo de hora
+    if (hora === '') {
+        enviar = false;
+        document.querySelector('#errorHora').textContent = 'Por favor, insira a hora do evento.';
+        horaInput.focus();
+    }
+
+    if (enviar) {
+        document.form1.submit();
+    }
+}
+function Limpar() {
+    document.querySelector("#errorNome").textContent = "";
+    document.querySelector("#errorDescricao").textContent = "";
+    document.querySelector("#errorData").textContent = "";
+    document.querySelector("#errorHora").textContent = "";
 }
