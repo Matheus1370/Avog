@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AVOG - Cadastro Organizador</title>
+    <title>AVOG - Perfil do Usuário</title>
     <link rel="stylesheet" type="text/css" href="../../css/components/navbar.css">
     <link rel="stylesheet" type="text/css" href="../../css/components/footer.css">
     <style>
@@ -24,11 +24,8 @@
             </div>
             <div class="nav-list">
                 <ul>
-                    <li class="nav-item"><a href="../index.html" class="nav-link">Início</a></li>
-                    <li class="nav-item"><a href="../sobre.html" class="nav-link">Sobre</a></li>
-                    <li class="nav-item"><a href="../projetos.html" class="nav-link">Projetos</a></li>
-                    <li class="nav-item"><a href="../apoiar.html" class="nav-link">Como Apoiar</a></li>
-                    <li class="nav-item"><a href="../contato.html" class="nav-link">Contato</a></li>
+                    <li class="nav-item"><a href="../home.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="../evento.html" class="nav-link">Eventos</a></li>
                 </ul>
             </div>
 
