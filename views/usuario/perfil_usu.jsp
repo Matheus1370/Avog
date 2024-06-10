@@ -1,4 +1,6 @@
 <%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="java.sql.*" %>
+<%@ page import="java.sql.*, java.time.*, java.text.*" %>
+<%@ include file="../../db/conexao.jsp" %>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -6,10 +8,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AVOG - Perfil do Usuário</title>
+    <title>AVOG - Cadastro Organizador</title>
     <link rel="stylesheet" type="text/css" href="../../css/components/navbar.css">
     <link rel="stylesheet" type="text/css" href="../../css/components/footer.css">
-    <link rel="stylesheet" type="text/css" href="../../css/usuarioperfil.css"
     <style>
         .evento {
             display: none;
@@ -25,8 +26,11 @@
             </div>
             <div class="nav-list">
                 <ul>
-                    <li class="nav-item"><a href="../home.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="../evento.html" class="nav-link">Eventos</a></li>
+                    <li class="nav-item"><a href="../index.html" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="../sobre.html" class="nav-link">Sobre</a></li>
+                    <li class="nav-item"><a href="../projetos.html" class="nav-link">Projetos</a></li>
+                    <li class="nav-item"><a href="../apoiar.html" class="nav-link">Como Apoiar</a></li>
+                    <li class="nav-item"><a href="../contato.html" class="nav-link">Contato</a></li>
                 </ul>
             </div>
 

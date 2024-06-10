@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 06/06/2024 às 02:13
+-- Tempo de geração: 10/06/2024 às 04:59
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -129,6 +129,13 @@ CREATE TABLE `organizador` (
   `senha` varchar(50) DEFAULT NULL,
   `cargo` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `organizador`
+--
+
+INSERT INTO `organizador` (`id_org`, `nome`, `email`, `senha`, `cargo`) VALUES
+(1, 'Márcio Aurélio Souza', 'marcioas23@gmail.com', 'empresaboa123', 1);
 
 -- --------------------------------------------------------
 
@@ -256,6 +263,7 @@ ALTER TABLE `usuario`
 -- Índices de tabela `usuarioevento`
 --
 ALTER TABLE `usuarioevento`
+  ADD PRIMARY KEY (`id_usuEvento`),
   ADD KEY `fk_usuario_usuarioevento` (`usuario`),
   ADD KEY `fk_evento_usuarioevento` (`evento`);
 
@@ -303,7 +311,7 @@ ALTER TABLE `fundo_financeiro`
 -- AUTO_INCREMENT de tabela `organizador`
 --
 ALTER TABLE `organizador`
-  MODIFY `id_org` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_org` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `organizadorevento`
@@ -322,6 +330,12 @@ ALTER TABLE `organizadorfinanceiro`
 --
 ALTER TABLE `usuario`
   MODIFY `id_usu` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de tabela `usuarioevento`
+--
+ALTER TABLE `usuarioevento`
+  MODIFY `id_usuEvento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restrições para tabelas despejadas
