@@ -65,6 +65,12 @@ p{
     color: rgb(219, 155, 71);
 }
 
+.spam{
+    padding: 6px;
+    font-size: 12px;
+    color: red;
+}
+
 .cadastre{
     color: rgb(219, 155, 71);
 }

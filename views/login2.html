@@ -7,20 +7,22 @@
     <title>login</title>
 </head>
 <body>
-    <div class="main-login">
+    <div class="main-login" action="../db/login.jsp" name="form1" method="post">
     <div class="left-login ">
         <div class="card-link">
             <h1>LOGIN</h1>
             <div class="textfield">
                 <label for="email">Email</label>
-                <input type="text" name="email" placeholder="Digite seu Email">
+                <input type="text" name="email" id="email" placeholder="Digite seu email...">
+                <span id="errorEmail" class="spam"></span>
             </div>
             <div class="textfield">
                 <label for="senha">Senha</label>
-                <input type="password" name="senha" placeholder="Digite sua Senha">
+                <input type="password" name="senha" id="senha" placeholder="Digite sua senha...">
+                <span id="errorSenha" class="spam"></span>
                 <p>Não tem cadastro? <a href="cadastro2.html" class="cadastre">Cadastre-se</a></p>
         </div>
-        <button class="btn-login">ENTRAR</button>
+        <input type="button" class="btn-login" onclick="verificar()" value="ENTRAR">
         <a href="index.html" class="voltar">Voltar</a>
     </div>
     <div class="right-login">
@@ -28,5 +30,6 @@
         <img class="voli" src="../source/banners/beach-volleyball-animate.svg" alt="Volei">
     </div>
 </div>
+<script src="../js/validacoes/login.js"></script>
 </body>
 </html>

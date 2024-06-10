@@ -7,28 +7,32 @@
     <title>login</title>
 </head>
 <body>
-    <div class="main-login">
+    <div class="main-login" action="../db/login.jsp" name="form1" method="post">
     <div class="left-login ">
         <div class="card-link">
             <h1>CADASTRE-SE</h1>
             <div class="textfield">
                 <label for="email">Nome</label>
-                <input type="text" name="email" placeholder="Digite seu Nome">
+                <input type="text" name="nome" id="nome" placeholder="Digite seu nome...">
+                <span id="errorNome" class="spam"></span>
             </div>
             <div class="textfield">
                 <label for="email">Email</label>
-                <input type="text" name="email" placeholder="Digite seu Email">
+                <input type="text" name="email" id="email" placeholder="Digite seu email...">
+                <span id="errorEmail" class="spam"></span>
             </div>
             <div class="textfield">
                 <label for="email">Senha</label>
-                <input type="password" name="email" placeholder="Digite sua Senha">
+                <input type="password" name="senha" id="senha" placeholder="Digite sua senha...">
+                <span id="errorSenha" class="spam"></span>
             </div>
             <div class="textfield">
                 <label for="senha">Confirme sua senha</label>
-                <input type="password" name="senha" placeholder="Digite sua senha novamente">
+                <input type="password" name="confirmeSenha" id="confirmeSenha" placeholder="Confirme sua senha...">
+                <span id="errorConfirmeSenha" class="spam"></span>
                 <p>Já possui uma conta? <a href="login2.html" class="cadastre">Entrar</a></p>
         </div>
-        <button class="btn-login">CADASTRAR</button>
+        <input type="button" class="btn-login" onclick="verificar()" value="CADASTRAR">
         <a href="index.html" class="voltar">Voltar</a>
     </div>
     <div class="right-login">
@@ -36,5 +40,6 @@
         <img class="voli" src="../source/banners/voleipraia.svg" alt="Volei">
     </div>
 </div>
+    <script src="../js/validacoes/usuario/cadastro.js"></script>
 </body>
 </html>
