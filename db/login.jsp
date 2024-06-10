@@ -24,7 +24,9 @@
     {
        session.setAttribute( "usuario_id"  ,  dados.getString("id_usu")  ) ;
        session.setAttribute( "usuario_nome"  ,  dados.getString("nome")  ) ;
-       response.sendRedirect("../views/usuario/evento.jsp");
+       session.setAttribute( "usuario_email"  ,  dados.getString("email")  ) ;
+       session.setAttribute( "usuario_senha"  ,  dados.getString("senha")  ) ;
+       response.sendRedirect("../views/usuario/perfil_usu.jsp");
     }else if(dados2.next())
     {
        session.setAttribute( "organizador_id"  ,  dados2.getString("id_org")  ) ;

@@ -1,12 +1,12 @@
 <% //Conexão com o banco 
 %>
-<%@page language="java" import="java.sql.*" %>
+<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="java.sql.*" %>
 <%@ page import="java.time.ZoneId" %>
 
 <%
     //variaveis para o banco de dados
     String banco    = "web" ;
-    String endereco = "jdbc:mysql://localhost:3306/"+banco;
+    String endereco = "jdbc:mysql://localhost:3306/" + banco;
     String usuario  = "root";
     String senha    = "" ;
 
