@@ -1,4 +1,6 @@
 <%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="java.sql.*" %>
+<%@ page import="java.sql.*, java.time.*, java.text.*" %>
+<%@ include file="../../db/conexao.jsp" %>
 
 <!DOCTYPE html>
 <html lang="pt-br">
