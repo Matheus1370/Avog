@@ -12,6 +12,7 @@
     <title>AVOG - Cadastro Organizador</title>
     <link rel="stylesheet" type="text/css" href="../../css/components/navbar.css">
     <link rel="stylesheet" type="text/css" href="../../css/components/footer.css">
+    <link rel="stylesheet" href="../../css/usuario/eventoUser.css">
     <style>
         .evento {
             display: none;
@@ -27,11 +28,7 @@
             </div>
             <div class="nav-list">
                 <ul>
-                    <li class="nav-item"><a href="../index.html" class="nav-link">Início</a></li>
-                    <li class="nav-item"><a href="../sobre.html" class="nav-link">Sobre</a></li>
-                    <li class="nav-item"><a href="../projetos.html" class="nav-link">Projetos</a></li>
-                    <li class="nav-item"><a href="../apoiar.html" class="nav-link">Como Apoiar</a></li>
-                    <li class="nav-item"><a href="../contato.html" class="nav-link">Contato</a></li>
+                    <li class="nav-item"><a href="perfil_usu.jsp" class="nav-link">Perfil</a></li>
                 </ul>
             </div>
 
@@ -45,11 +42,7 @@
         </nav>
         <div class="mobile-menu">
             <ul>
-                <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
-                <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
-                <li class="nav-item"><a href="projetos.html" class="nav-link">Projetos</a></li>
-                <li class="nav-item"><a href="apoiar.html" class="nav-link">Como Apoiar</a></li>
-                <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+                <li class="nav-item"><a href="perfil_usu.jsp" class="nav-link">Perfil</a></li>
             </ul>
             <div class="login-button">
                 <button><a href="../../db/logout.jsp">SAIR</a></button>
@@ -95,7 +88,7 @@
                     <p><%= dados.getString("hora") %></p>
                     <form action="../../db/cadUsuEvento.jsp" method="post">
                         <input type="hidden" name="id_evento" id="id_evento" value="<%= dados.getString("id_evento") %>">
-                        <button type="submit">Salvar</button>
+                        <button type="submit">Participar</button>
                     </form>
                 </div>
             <% } %>
