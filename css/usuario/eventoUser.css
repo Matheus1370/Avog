@@ -1,0 +1,90 @@
+.sub_nav {
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 30px;
+    border-bottom: 1px solid rgb(22, 25, 36);
+}
+
+.sub_nav #titulos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sub_nav .text_titulo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+
+.sub_nav #sub_titulos ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.sub_nav #sub_titulos .nav-item {
+    margin: 0;
+}
+
+.sub_nav #sub_titulos .nav-item a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.sub_nav #sub_titulos .nav-item a:hover {
+    color: white;
+}
+
+.sub_nav #sub_titulos .nav-item a.active {
+    color: white;
+    font-weight: bold;
+}
+
+.evento {
+    display: none;
+    padding: 20px;
+}
+
+.evento.active {
+    display: block;
+}
+
+.caixa {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: rgb(42,47,66);
+    border: 1px solid rgb(22, 25, 36);
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: calc(33% - 20px);
+    box-sizing: border-box;
+}
+
+.card p {
+    margin: 10px 0;
+    color: white;
+}
+
+.card button {
+    background-color: rgb(33,53,122);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card button:hover {
+    background-color: rgb(51, 78, 175);
+}

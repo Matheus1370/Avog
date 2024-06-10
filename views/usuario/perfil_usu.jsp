@@ -9,6 +9,7 @@
     <title>AVOG - Perfil do Usuário</title>
     <link rel="stylesheet" type="text/css" href="../../css/components/navbar.css">
     <link rel="stylesheet" type="text/css" href="../../css/components/footer.css">
+    <link rel="stylesheet" type="text/css" href="../../css/usuarioperfil.css"
     <style>
         .evento {
             display: none;
