@@ -17,6 +17,8 @@
 
     stm.execute();
     stm.close();
-    response.sendRedirect("../views/cadastro.html");
+
+
+    response.sendRedirect("../views/login.html");
     
 %>
