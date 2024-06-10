@@ -18,5 +18,5 @@
 
     stm.execute();
     stm.close();
-    response.sendRedirect("../views/usuario/evento.jsp");
+    response.sendRedirect("../views/usuario/evento.jsp");                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
 %>
