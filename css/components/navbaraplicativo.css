@@ -1,0 +1,47 @@
+:root{
+    --bg-general: rgb(31, 34, 45);
+    --bg-primary: rgb(19, 21, 28);
+    --bg-secondary: rgb(42,47,66);
+    --bg-slogan: rgb(15,17,17);
+
+    --color-letters: rgb(255, 255, 255);
+    --color-signature: rgba(255, 255, 255, 0.363);
+
+    --line-icons: rgb(33,53,122);
+    --destaque: rgba(255, 0, 0, 0.795);
+
+    --shadow-first: rgba(0, 0, 0, 0.25);
+    --shadow-second: rgba(0, 0, 0, 0.658);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: var(--color-letters);
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: rgba(58, 56, 83, 0.788);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #0A66C2;
+}
+
+body {
+    background-color: var(--bg-general);
+    font-family: Arial, sans-serif;
+    font-family: "Imprima", sans-serif;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    background-color: var(--bg-primary);
+}
