@@ -10,77 +10,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AVOG - Cadastro Organizador</title>
     <link rel="stylesheet" href="../../css/organizador/cadAdmin.css">
-    <link rel="stylesheet" href="../../css/components/navbar.css">
     <link rel="stylesheet" href="../../css/components/footer.css">
+    <link rel="stylesheet" href="../../css/login.css">
 </head>
 <body>
-    <header>
-        <nav class="nav-bar">
-            <div class="logo">
-                <img src="../../source/icons/Avog.svg" alt="">
-            </div>
-            <div class="nav-list">
-                <ul>
-                    <li class="nav-item"><a href="evento.jsp" class="nav-link">Evento</a></li>
-                </ul>
-            </div>
-
-            <div class="login-button">
-                <button><a href="../../db/logout.jsp">Sair</a></button>
-            </div>
-
-            <div class="mobile-menu-icon">
-                <button onclick="menuShow()"><img class="icon" src="../../source/icons/hamburgue.svg" alt=""></button>
-            </div>
-        </nav>
-        <div class="mobile-menu">
-            <ul>
-                    <li class="nav-item"><a href="evento.jsp" class="nav-link">Evento</a></li>
-            </ul>
-            <div class="login-button">
-                <button><a href="../../db/logout.jsp">SAIR</a></button>
-            </div>
-        </div>
-    </header>
-
    <div class="titulos">
         <h2 class="text_titulo">Conta de Administrador</h2>
     </div>
 
     <div class="content">
-    <form action="../../db/cadAdmin.jsp" name="form1" method="post">
-        <label for="nome">Nome: </label>
-        <input type="text" name="nome" id="nome" placeholder="Digite seu nome...">
-        <span id="errorNome" class="spam"></span>
-        <br>
-        
-        <label for="email">Email: </label>
-        <input type="text" name="email" id="email" placeholder="Digite seu email...">
-        <span id="errorEmail" class="spam"></span>
-        <br>
 
-        <label for="senha">Senha: </label>
-        <input type="password" name="senha" id="senha" placeholder="Digite sua senha...">
-        <span id="errorSenha" class="spam"></span>
-        <br>
-        
-        <label for="confirmSenha">Confirme sua senha: </label>
-        <input type="password" name="confirmeSenha" id="confirmeSenha" placeholder="Confirme sua senha...">
-        <span id="errorConfirmeSenha" class="spam"></span>
-        <br>
+        <form class="main-login" action="../../db/cadAdmin.jsp" name="form1" method="post">
+            <div class="left-login ">
+                <div class="card-link">
+                    <h1>CADASTRE-SE</h1>
+                    <div class="textfield">
+                        <label for="email">Nome</label>
+                        <input type="text" name="nome" id="nome" placeholder="Digite seu nome...">
+                        <span id="errorNome" class="spam"></span>
+                    </div>
+                    <div class="textfield">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" placeholder="Digite seu email...">
+                        <span id="errorEmail" class="spam"></span>
+                    </div>
+                    <div class="textfield">
+                        <label for="email">Senha</label>
+                        <input type="password" name="senha" id="senha" placeholder="Digite sua senha...">
+                        <span id="errorSenha" class="spam"></span>
+                    </div>
+                    <div class="textfield">
+                        <label for="senha">Confirme sua senha</label>
+                        <input type="password" name="confirmeSenha" id="confirmeSenha" placeholder="Confirme sua senha...">
+                        <span id="errorConfirmeSenha" class="spam"></span>
+                    </div>
+                    <div class="textfield">
+                    <label for="cargo">Cargo </label>
+                    <select name="cargo" id="cargo">
+                    <option value="">Selecione</option>
+                    <option value="1">Presidente</option>
+                    <option value="2">Vice</option>
+                    <option value="3">Secretário</option>
+                    </select>
+                    </div>
+                        <p>Já possui uma conta? <a href="login.html" class="cadastre">Entrar</a></p>
 
-        <label for="cargo">Cargo: </label>
-        <select name="cargo" id="cargo">
-            <option value="">Selecione</option>
-            <option value="1">Presidente</option>
-            <option value="2">Vice</option>
-            <option value="3">Secretário</option>
-        </select>
-        <span id="errorCargo" class="spam"></span>
-        <br>
-
-        <input type="button" onclick="verificar()" value="Salvar">
-    </form>
+                     <span id="errorCargo" class="spam"></span>
+                    <button class="btn-login" onclick="verificar()">SALVAR</button>
+                    <a href="index.html" class="voltar">Voltar</a>
+                </div>
+                <div class="right-login">
+                    <h1>Faça seu cadastro como Administrador!!</h1>
+                    <img class="voli" src="../../source/banners/admin-animate.svg" alt="Volei">
+                </div>
+            </div>
+        </form>
 </div>
         <script src="../../js/validacoes/organizador/cadAdmin.js"></script>
 </body>
