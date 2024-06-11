@@ -32,7 +32,7 @@ body * {
 }
 
 img .voli{
-   width: 10vw;
+   width: 30vw;
 }
 
 .left-login{
@@ -58,7 +58,6 @@ img .voli{
 p{
     color: white;
     padding-top: 10px;
-    padding-left: 100px;
 }
 
 .voltar{
@@ -91,18 +90,6 @@ p{
 }
 
 .textfield > input, .textfield select  {
-    width: 100%;
-    border: none;
-    border-radius: 10px;
-    padding: 15px;
-    background: rgba(0, 0, 0, 0.25);
-    color: #f0ffffde;
-    font-size: 12pt;
-    box-shadow: 0px 10px 40px #00000056;
-    outline: none;
-    box-sizing: border-box;
-}
-#descricao {
     width: 100%;
     border: none;
     border-radius: 10px;

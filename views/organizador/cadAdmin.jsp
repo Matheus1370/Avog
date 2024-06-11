@@ -47,9 +47,9 @@
                     </select>
                     </div>
                         <p>Já possui uma conta? <a href="login.html" class="cadastre">Entrar</a></p>
-
                      <span id="errorCargo" class="spam"></span>
                     <button class="btn-login" onclick="verificar()">SALVAR</button>
+                    <a href="perfil_org.jsp" class="voltar">Voltar</a>
                 </div>
                 <div class="right-login">
                     <h1>Faça seu cadastro como Administrador!!</h1>
