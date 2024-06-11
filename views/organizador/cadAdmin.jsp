@@ -10,16 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AVOG - Cadastro Organizador</title>
     <link rel="stylesheet" href="../../css/organizador/cadAdmin.css">
-    <link rel="stylesheet" href="../../css/components/footer.css">
+    <link rel="stylesheet" href="../../css/components/footer.css"> 
     <link rel="stylesheet" href="../../css/login.css">
 </head>
 <body>
-   <div class="titulos">
-        <h2 class="text_titulo">Conta de Administrador</h2>
-    </div>
-
-    <div class="content">
-
         <form class="main-login" action="../../db/cadAdmin.jsp" name="form1" method="post">
             <div class="left-login ">
                 <div class="card-link">
@@ -46,7 +40,7 @@
                     </div>
                     <div class="textfield">
                     <label for="cargo">Cargo </label>
-                    <select name="cargo" id="cargo">
+                    <select class="select" name="cargo" id="cargo">
                     <option value="">Selecione</option>
                     <option value="1">Presidente</option>
                     <option value="2">Vice</option>
@@ -65,7 +59,6 @@
                 </div>
             </div>
         </form>
-</div>
         <script src="../../js/validacoes/organizador/cadAdmin.js"></script>
 </body>
 </html>

@@ -21,6 +21,7 @@
     <title>AVOG - Cadastro Organizador</title>
     <link rel="stylesheet" type="text/css" href="../../css/components/navbar.css">
     <link rel="stylesheet" type="text/css" href="../../css/components/footer.css">
+    <link rel="stylesheet" href="../../css/perfilusu.css">
     <style>
         .evento {
             display: none;

@@ -1,0 +1,48 @@
+
+main {
+    background-color: rgb(42,47,66);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    margin-left: 700px;
+    margin-top: 100px;
+}
+
+
+.titulo h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+}
+
+
+.dados {
+    display: flex;
+    flex-direction: column;
+}
+
+.info {
+    margin-bottom: 15px;
+}
+
+.info label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+.info input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.25);
+    color: white;
+    font-size: 16px;
+    cursor: not-allowed;
+}
