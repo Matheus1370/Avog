@@ -85,6 +85,7 @@
     transition: background-color 0.3s;
 }
 
+
 .card button:hover {
     background-color: rgb(51, 78, 175);
 }

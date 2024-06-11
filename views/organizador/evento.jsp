@@ -1,4 +1,7 @@
 <%@ page import="java.sql.*, java.text.*, java.time.*" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.Arrays" %>
+<%@ page import="java.util.ArrayList" %>
 <%@ include file="../../db/conexao.jsp" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <% if(session.getAttribute("organizador_id") == null ){response.sendRedirect("../../db/restrito.jsp");}%>
@@ -13,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/components/navbar.css">
     <link rel="stylesheet" type="text/css" href="../../css/components/footer.css">
     <link rel="stylesheet" href="../../css/usuario/eventoUser.css">
+    <link rel="stylesheet" href="../../css/login.css">
     <style>
         .evento {
             display: none;
@@ -90,38 +94,56 @@
                     <p><%= dados.getString("descricao") %></p>
                     <p><%= dataFormatada %></p>
                     <p><%= dados.getString("hora") %></p>
-                    <p><% 
+                    <p>
+                    <% 
                         // Recuperar o ID do evento desejado
                         int idEvento = Integer.parseInt(dados.getString("id_evento")); // Neste caso, vamos supor que o ID do evento desejado seja 5
-
+                        List<Integer> arrayFromDB = new ArrayList<>();
+                        
                         // Consulta SQL para recuperar os nomes das atividades associadas ao evento
-                        String sql = "SELECT nome " +
-                                    "FROM atividade " +
-                                    "JOIN atividadeevento ON atividade.id_ativ = atividadeevento.atividade " +
-                                    "WHERE atividadeevento.evento = ?";
+                        String sql = "SELECT atividade FROM atividadeevento where evento = ?";
                         PreparedStatement pstmtt = conexao.prepareStatement(sql);
                         pstmtt.setInt(1, idEvento); // Definir o ID do evento como parâmetro
                         ResultSet rss = pstmtt.executeQuery();
-                        out.print(rss.next());
-                    %>
-
-                    <ul>
-                    <%
-                        // Exibir os nomes das atividades associadas ao evento
+                        
                         while (rss.next()) {
-                            String nomeAtividade = rss.getString("nome");
-                    %>
-                        <li><%= nomeAtividade %></li>
-                    <%
+                            String atividadeString = rss.getString("atividade");
+                            // Remover os colchetes e quebrar a string em substrings separadas por vírgulas
+                            String[] elementosString = atividadeString.substring(1, atividadeString.length() - 1).split(",\\s*");
+                            // Converter substrings para inteiros
+                            for (String elementoString : elementosString) {
+                                arrayFromDB.add(Integer.parseInt(elementoString));
+                            }
                         }
                     %>
+
+                    <ul style="list-style: none;">
+                        <%
+                            // Iterar sobre a lista e exibir cada elemento em uma lista HTML
+                            for (Integer elemento : arrayFromDB) {
+                                int id_ativ = elemento;
+                                // Consulta SQL para recuperar os nomes das atividades associadas ao evento
+                                String sql2 = "SELECT * FROM atividade where id_ativ = ?";
+                                PreparedStatement pstmtt2 = conexao.prepareStatement(sql2);
+                                pstmtt2.setInt(1, id_ativ); // Definir o ID do evento como parâmetro
+                                ResultSet rss2 = pstmtt2.executeQuery();
+                                while(rss2.next()){
+                        %>
+                                    <li><%= rss2.getString("nome") %></li>
+                        <%
+                                }
+                                rss2.close();
+                                pstmtt2.close();
+                            }
+                        %>
                     </ul>
 
                     <%
                         // Fechar os recursos (ResultSet e PreparedStatement)
                         rss.close();
                         pstmtt.close();
-                    %></P>
+                    %>
+                    </p>
                 </div>
             <% } %>
         </div>
@@ -145,6 +167,56 @@
                     <p><%= dados2.getString("descricao") %></p>
                     <p><%= dataFormatada2 %></p>
                     <p><%= dados2.getString("hora") %></p>
+                    <p>
+                        <% 
+                            // Recuperar o ID do evento desejado
+                            int idEvento2 = Integer.parseInt(dados2.getString("id_evento")); // Neste caso, vamos supor que o ID do evento desejado seja 5
+                            List<Integer> arrayFromDBEnc = new ArrayList<>();
+                            
+                            // Consulta SQL para recuperar os nomes das atividades associadas ao evento
+                            String sqlEnc = "SELECT atividade FROM atividadeevento where evento = ?";
+                            PreparedStatement pstmttEnc = conexao.prepareStatement(sqlEnc);
+                            pstmttEnc.setInt(1, idEvento2); // Definir o ID do evento como parâmetro
+                            ResultSet rssEnc = pstmttEnc.executeQuery();
+                            
+                            while (rssEnc.next()) {
+                                String atividadeString2 = rssEnc.getString("atividade");
+                                // Remover os colchetes e quebrar a string em substrings separadas por vírgulas
+                                String[] elementosEncString = atividadeString2.substring(1, atividadeString2.length() - 1).split(",\\s*");
+                                // Converter substrings para inteiros
+                                for (String elementoEncString : elementosEncString) {
+                                    arrayFromDBEnc.add(Integer.parseInt(elementoEncString));
+                                }
+                            }
+                        %>
+
+                        <ul style="list-style: none;">
+                        <%
+                            // Iterar sobre a lista e exibir cada elemento em uma lista HTML
+                            for (Integer elementoEnc : arrayFromDBEnc) {
+                                int id_ativ2 = elementoEnc;
+                                // Consulta SQL para recuperar os nomes das atividades associadas ao evento
+                                String sqlEnc2 = "SELECT * FROM atividade where id_ativ = ?";
+                                PreparedStatement pstmttEnc2 = conexao.prepareStatement(sqlEnc2);
+                                pstmttEnc2.setInt(1, id_ativ2); // Definir o ID da atividade como parâmetro
+                                ResultSet rssEnc2 = pstmttEnc2.executeQuery();
+                                while(rssEnc2.next()){
+                        %>
+                                    <li><%= rssEnc2.getString("nome") %></li>
+                        <%
+                                }
+                                rssEnc2.close();
+                                pstmttEnc2.close();
+                            }
+                        %>
+                        </ul>
+
+                        <%
+                            // Fechar os recursos (ResultSet e PreparedStatement)
+                            rssEnc.close();
+                            pstmttEnc.close();
+                        %>
+                    </p>
                 </div>
             <% } %>
         </div>
@@ -152,25 +224,35 @@
 
     <div id="criarEvento" class="evento">
         <form action="../../db/cadEvento.jsp" name="form1" method="post">
+            <div class="textfield">
             <label for="nome" class="texto">Nome: </label>
             <input type="text" name="nome" id="nome" placeholder="Digite seu nome...">
             <span id="errorNome" class="spam"></span>
             <br>
+                </div>
 
+            <div class="textfield">
             <label for="descricao" class="texto">Descrição: </label>
             <textarea name="descricao" id="descricao" cols="30" rows="10" ></textarea>
             <span id="errorDescricao" class="spam"></span>
             <br>
+                </div>
             
+            <div class="textfield">
             <label for="data" class="texto">Data: </label>
             <input type="date" name="data" id="data">
             <span id="errorData" class="spam"></span>
             <br>
+                </div>
 
+                <div class="textfield">
             <label for="hora">Hora: </label>
             <input type="time" name="hora" id="hora">
             <span id="errorHora" class="spam"></span>
             <br>
+                </div>
+            
+                <div class="textfield">
             <%
                 String cst = "SELECT * FROM atividade;";
                 PreparedStatement sttm = conexao.prepareStatement(cst);
@@ -180,7 +262,8 @@
                     String atividade_id = rs.getString("id_ativ");
                 %>
                     <input type="checkbox" name="atividade" value="<%= atividade_id %>"><%= atividade %><br>
-                <% }%>
+                <% }%><br>
+                </div>
             <input type="button" onclick="verificar()" value="Salvar">
         </form>
     </div>
