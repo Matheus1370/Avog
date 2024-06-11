@@ -88,7 +88,6 @@
 .card button:hover {
     background-color: rgb(51, 78, 175);
 }
-<<<<<<< HEAD
 .evento {
     width: 50%;
     margin: 0 auto;
@@ -154,5 +153,3 @@ form {
 textarea {
     resize: vertical;
 }
-=======
->>>>>>> 1836859e635c6840827062b98522675f68620c6c

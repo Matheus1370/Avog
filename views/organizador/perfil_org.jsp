@@ -1,15 +1,17 @@
 <%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="java.sql.*" %>
 <%@ page import="java.sql.*, java.time.*, java.text.*" %>
 <%@ include file="../../db/conexao.jsp" %>
-<% if(session.getAttribute("usuario_id") == null ){response.sendRedirect("../../db/restrito.jsp");}%>
+<% if(session.getAttribute("organizador_id") == null ){response.sendRedirect("../../db/restrito.jsp");}%>
 <% 
-    int idUsuario = Integer.parseInt(session.getAttribute("usuario_id").toString()); 
+    int idOrganizador = Integer.parseInt(session.getAttribute("organizador_id").toString()); 
     //Busca os eventos da data atual e datas seguintes
-    String consulta = "select * from usuario where id_usu = ?;";
+    String consulta = "select * from organizador where id_org = ?;";
     //Cria o statement para executar o comando no banco
     PreparedStatement stm = conexao.prepareStatement(consulta);
-    stm.setInt(1, idUsuario);
-    ResultSet dados = stm.executeQuery();
+    stm.setInt(1, idOrganizador);
+    ResultSet dados = stm.executeQuery();//Busca os eventos da data atual e datas seguintes
+
+  
 %>
 
 <!DOCTYPE html>
@@ -60,9 +62,15 @@
 
         <main>
             <div class="titulo">
-                <h1>Perfil do Usuário</h1>
+                <h1>Perfil do Organizador</h1>
             </div>
-            <% if(dados.next()){ %>
+            <% if(dados.next()){ 
+                int idCargo = Integer.parseInt(dados.getString("cargo"));
+                String consulta2 = "select * from cargo where id_cargo = ?;";
+                //Cria o statement para executar o comando no banco
+                PreparedStatement stm2 = conexao.prepareStatement(consulta2);
+                stm2.setInt(1, idCargo);
+                ResultSet dados2 = stm2.executeQuery();%>
                 <div class="dados">
                     <div class="info">
                         <label for="txtNome">Nome</label>
@@ -76,6 +84,13 @@
                         <label for="txtSenha">Senha</label>
                         <input type="text" class="txtSenha" id="txtSenha" disabled value=<%= dados.getString("senha") %>>
                     </div>
+                    </div>
+                    <% if(dados2.next()){%>
+                        <div class="info">
+                            <label for="txtCargo">Cargo</label>
+                            <input type="text" class="txtCargo" id="txtCargo" disabled value=<%= dados2.getString("nome")%>>
+                        </div>
+                    <% } %>
                 </div>
             <% }%>
         </main>

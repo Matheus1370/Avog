@@ -4,77 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AVOG - Login</title>
-    <link rel="stylesheet" href="../css/components/navbar.css">
-    <link rel="stylesheet" href="../css/components/footer.css">
-    <link rel="stylesheet" href="../css/cadastro.css">
-        
-    <script src="../js/navbar.js"></script>
+    <link rel="stylesheet" href="../css/login.css">
+    <title>login</title>
 </head>
 
 <body>
-    <header>
-        <nav class="nav-bar">
-            <div class="logo">
-                <img src="../source/icons/Avog.svg" alt="">
+    <form class="main-login" action="../db/login.jsp" name="form1" method="post">
+        <div class="left-login ">
+            <div class="card-link">
+                <h1>LOGIN</h1>
+        <span id="errorLogin" class="spam" style="display: none;"></span>
+                <div class="textfield">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" placeholder="Digite seu email...">
+                    <span id="errorEmail" class="spam"></span>
+                </div>
+                <div class="textfield">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" id="senha" placeholder="Digite sua senha...">
+                    <span id="errorSenha" class="spam"></span>
+                    <p>Não tem cadastro? <a href="cadastro.html" class="cadastre">Cadastre-se</a></p>
+                </div>
+                <input type="button" class="btn-login" onclick="verificar()" value="ENTRAR">
+                <a href="index.html" class="voltar">Voltar</a>
             </div>
-            <div class="nav-list">
-                <ul>
-                    <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
-                    <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
-                    <li class="nav-item"><a href="projetos.html" class="nav-link">Projetos</a></li>
-                    <li class="nav-item"><a href="apoiar.html" class="nav-link">Como Apoiar</a></li>
-                    <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
-                </ul>
-            </div>
-
-            <div class="login-button">
-                <button><a href="login.html">ENTRAR</a></button>
-            </div>
-
-            <div class="mobile-menu-icon">
-                <button onclick="menuShow()"><img class="icon" src="../source/icons/hamburgue.svg" alt=""></button>
-            </div>
-        </nav>
-        <div class="mobile-menu">
-            <ul>
-                <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
-                <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
-                <li class="nav-item"><a href="projetos.html" class="nav-link">Projetos</a></li>
-                <li class="nav-item"><a href="apoiar.html" class="nav-link">Como Apoiar</a></li>
-                <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
-            </ul>
-            <div class="login-button">
-                <button><a href="login.html">ENTRAR</a></button>
+            <div class="right-login">
+                <h1>Seja Bem-Vindo ao nosso mundo!!</h1>
+                <img class="voli" src="../source/banners/beach-volleyball-animate.svg" alt="Volei">
             </div>
         </div>
-    </header>
-
-    <div class="titulos">
-        <h2 class="text_titulo">Login</h2>
-    </div>
-
-    <div class="content">
-    <form action="../db/login.jsp" name="form1" method="post">
-        <span id="errorLogin" class="spam" style="display: none;"></span>
-        <label for="email" class="texto">Email: </label>
-        <input type="text" name="email" id="email" placeholder="Digite seu email...">
-        <span id="errorEmail" class="spam"></span>
-        <br>
-        
-        <label for="senha" class="texto">Senha: </label>
-        <input type="password" name="senha" id="senha" placeholder="Digite sua senha...">
-        <span id="errorSenha" class="spam"></span>
-        <br>
-
-        <input type="button" onclick="verificar()" value="Logar">
     </form>
-</div>
-
-<div class="cadastro-button">
-    <button><a href="cadastro.html">Cadastre-se</a></button>
-</div>
-
     <script src="../js/validacoes/login.js"></script>
 </body>
+
 </html>
