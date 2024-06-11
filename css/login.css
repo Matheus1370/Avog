@@ -31,8 +31,8 @@ body * {
     color: white;
 }
 
-.voli{
-    width: 30vw;
+img .voli{
+   width: 10vw;
 }
 
 .left-login{
@@ -90,7 +90,7 @@ p{
     width: 100%;
 }
 
-.textfield > input  {
+.textfield > input, .textfield select  {
     width: 100%;
     border: none;
     border-radius: 10px;

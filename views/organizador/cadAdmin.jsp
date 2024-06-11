@@ -17,7 +17,6 @@
         <form class="main-login" action="../../db/cadAdmin.jsp" name="form1" method="post">
             <div class="left-login ">
                 <div class="card-link">
-                    <h1>CADASTRE-SE</h1>
                     <div class="textfield">
                         <label for="email">Nome</label>
                         <input type="text" name="nome" id="nome" placeholder="Digite seu nome...">
@@ -51,7 +50,6 @@
 
                      <span id="errorCargo" class="spam"></span>
                     <button class="btn-login" onclick="verificar()">SALVAR</button>
-                    <a href="index.html" class="voltar">Voltar</a>
                 </div>
                 <div class="right-login">
                     <h1>Faça seu cadastro como Administrador!!</h1>

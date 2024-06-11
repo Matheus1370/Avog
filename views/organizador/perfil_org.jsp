@@ -40,6 +40,7 @@
             <div class="nav-list">
                 <ul>
                     <li class="nav-item"><a href="evento.jsp" class="nav-link">Evento</a></li>
+                    <li class="nav-item"><a href="cadAdmin.jsp" class="nav-link">Cadastro</a></li>
                 </ul>
             </div>
 
@@ -54,6 +55,7 @@
         <div class="mobile-menu">
             <ul>
                     <li class="nav-item"><a href="evento.jsp" class="nav-link">Evento</a></li>
+                    <li class="nav-item"><a href="cadAdmin.jsp" class="nav-link">Cadastro</a></li>
             </ul>
             <div class="login-button">
                 <button><a href="../../db/logout.jsp">SAIR</a></button>
