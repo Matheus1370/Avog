@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 10/06/2024 às 04:59
+-- Tempo de geração: 11/06/2024 às 04:49
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -11,7 +11,6 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-CREATE database `web`;
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -52,7 +51,7 @@ INSERT INTO `atividade` (`id_ativ`, `nome`, `descricao`) VALUES
 
 CREATE TABLE `atividadeevento` (
   `id_ativEvento` int(11) NOT NULL,
-  `atividade` int(11) NOT NULL,
+  `atividade` text NOT NULL,
   `evento` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -202,7 +201,7 @@ ALTER TABLE `atividade`
 --
 ALTER TABLE `atividadeevento`
   ADD PRIMARY KEY (`id_ativEvento`),
-  ADD KEY `fk_atividade_atividadeevento` (`atividade`),
+  ADD KEY `fk_atividade_atividadeevento` (`atividade`(768)),
   ADD KEY `fk_evento_atividadeevento` (`evento`);
 
 --
@@ -336,7 +335,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `usuarioevento`
 --
 ALTER TABLE `usuarioevento`
-  MODIFY `id_usuEvento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_usuEvento` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Restrições para tabelas despejadas
@@ -346,7 +345,6 @@ ALTER TABLE `usuarioevento`
 -- Restrições para tabelas `atividadeevento`
 --
 ALTER TABLE `atividadeevento`
-  ADD CONSTRAINT `fk_atividade_atividadeevento` FOREIGN KEY (`atividade`) REFERENCES `atividade` (`id_ativ`) ON DELETE CASCADE ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_evento_atividadeevento` FOREIGN KEY (`evento`) REFERENCES `evento` (`id_evento`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
