@@ -129,7 +129,7 @@
     <div id="criarEvento" class="evento">
         <form action="../../db/cadEvento.jsp" name="form1" method="post">
             <label for="nome" class="texto">Nome: </label>
-            <input type="text" name="nome" id="nome" placeholder="Digite seu nome...">
+            <input type="text" name="nome" id="nome" placeholder="Digite o nome do evento...">
             <span id="errorNome" class="spam"></span>
             <br>
 

@@ -88,3 +88,69 @@
 .card button:hover {
     background-color: rgb(51, 78, 175);
 }
+
+.evento {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid rgb(22, 25, 36);
+    border-radius: 10px;
+    background-color: rgb(42,47,66);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.texto {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+
+input[type="text"], input[type="date"], input[type="time"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(22, 25, 36);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+
+.spam {
+    color: red;
+    font-size: 0.9em;
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+input[type="button"] {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(51, 78, 175);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+input[type="button"]:hover {
+    background-color: rgb(52, 91, 233);
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+textarea {
+    resize: vertical;
+}
