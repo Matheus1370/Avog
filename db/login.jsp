@@ -24,14 +24,12 @@
     {
        session.setAttribute( "usuario_id"  ,  dados.getString("id_usu")  ) ;
        session.setAttribute( "usuario_nome"  ,  dados.getString("nome")  ) ;
-       session.setAttribute( "usuario_email"  ,  dados.getString("email")  ) ;
-       session.setAttribute( "usuario_senha"  ,  dados.getString("senha")  ) ;
        response.sendRedirect("../views/usuario/perfil_usu.jsp");
     }else if(dados2.next())
     {
        session.setAttribute( "organizador_id"  ,  dados2.getString("id_org")  ) ;
        session.setAttribute( "organizador_nome"  ,  dados2.getString("nome")  ) ;
-       response.sendRedirect("../views/organizador/evento.jsp");
+       response.sendRedirect("../views/organizador/perfil_org.jsp");
     }
     else
     {

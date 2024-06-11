@@ -19,6 +19,6 @@
     stm.close();
 
 
-    response.sendRedirect("../views/login2.html");
+    response.sendRedirect("../views/login.html");
     
 %>

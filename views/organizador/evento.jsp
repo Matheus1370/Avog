@@ -28,11 +28,7 @@
             </div>
             <div class="nav-list">
                 <ul>
-                    <li class="nav-item"><a href="../index.html" class="nav-link">Início</a></li>
-                    <li class="nav-item"><a href="../sobre.html" class="nav-link">Sobre</a></li>
-                    <li class="nav-item"><a href="../projetos.html" class="nav-link">Projetos</a></li>
-                    <li class="nav-item"><a href="../apoiar.html" class="nav-link">Como Apoiar</a></li>
-                    <li class="nav-item"><a href="../contato.html" class="nav-link">Contato</a></li>
+                    <li class="nav-item"><a href="perfil_org.jsp" class="nav-link">Perfil</a></li>
                 </ul>
             </div>
 
@@ -46,14 +42,10 @@
         </nav>
         <div class="mobile-menu">
             <ul>
-                <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
-                <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
-                <li class="nav-item"><a href="projetos.html" class="nav-link">Projetos</a></li>
-                <li class="nav-item"><a href="apoiar.html" class="nav-link">Como Apoiar</a></li>
-                <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+                    <li class="nav-item"><a href="perfil_org.jsp" class="nav-link">Perfil</a></li>
             </ul>
             <div class="login-button">
-                <button><a href="../../db/logout.jsp">Sair</a></button>
+                <button><a href="../../db/logout.jsp">SAIR</a></button>
             </div>
         </div>
     </header>
@@ -98,6 +90,38 @@
                     <p><%= dados.getString("descricao") %></p>
                     <p><%= dataFormatada %></p>
                     <p><%= dados.getString("hora") %></p>
+                    <p><% 
+                        // Recuperar o ID do evento desejado
+                        int idEvento = Integer.parseInt(dados.getString("id_evento")); // Neste caso, vamos supor que o ID do evento desejado seja 5
+
+                        // Consulta SQL para recuperar os nomes das atividades associadas ao evento
+                        String sql = "SELECT nome " +
+                                    "FROM atividade " +
+                                    "JOIN atividadeevento ON atividade.id_ativ = atividadeevento.atividade " +
+                                    "WHERE atividadeevento.evento = ?";
+                        PreparedStatement pstmtt = conexao.prepareStatement(sql);
+                        pstmtt.setInt(1, idEvento); // Definir o ID do evento como parâmetro
+                        ResultSet rss = pstmtt.executeQuery();
+                        out.print(rss.next());
+                    %>
+
+                    <ul>
+                    <%
+                        // Exibir os nomes das atividades associadas ao evento
+                        while (rss.next()) {
+                            String nomeAtividade = rss.getString("nome");
+                    %>
+                        <li><%= nomeAtividade %></li>
+                    <%
+                        }
+                    %>
+                    </ul>
+
+                    <%
+                        // Fechar os recursos (ResultSet e PreparedStatement)
+                        rss.close();
+                        pstmtt.close();
+                    %></P>
                 </div>
             <% } %>
         </div>
@@ -129,7 +153,7 @@
     <div id="criarEvento" class="evento">
         <form action="../../db/cadEvento.jsp" name="form1" method="post">
             <label for="nome" class="texto">Nome: </label>
-            <input type="text" name="nome" id="nome" placeholder="Digite o nome do evento...">
+            <input type="text" name="nome" id="nome" placeholder="Digite seu nome...">
             <span id="errorNome" class="spam"></span>
             <br>
 
@@ -147,7 +171,16 @@
             <input type="time" name="hora" id="hora">
             <span id="errorHora" class="spam"></span>
             <br>
-
+            <%
+                String cst = "SELECT * FROM atividade;";
+                PreparedStatement sttm = conexao.prepareStatement(cst);
+                ResultSet rs = sttm.executeQuery();
+                while (rs.next()) {
+                    String atividade = rs.getString("nome");
+                    String atividade_id = rs.getString("id_ativ");
+                %>
+                    <input type="checkbox" name="atividade" value="<%= atividade_id %>"><%= atividade %><br>
+                <% }%>
             <input type="button" onclick="verificar()" value="Salvar">
         </form>
     </div>

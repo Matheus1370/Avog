@@ -8,6 +8,7 @@
     String descricao = request.getParameter("descricao");
     String data = request.getParameter("data");
     String hora = request.getParameter("hora");
+    String[] atividadesSelecionadas = request.getParameterValues("atividade");
 
     // Variável para armazenar o ID do evento
     int novoID = -1;
@@ -54,5 +55,33 @@
 
     // Fecha o PreparedStatement
     stmAssociada.close();
+
+    // Converte os IDs das atividades para inteiros
+    int[] idsAtividades = new int[atividadesSelecionadas.length];
+    for (int i = 0; i < atividadesSelecionadas.length; i++) {
+        idsAtividades[i] = Integer.parseInt(atividadesSelecionadas[i]);
+    }
+    // Montar a lista de atividades selecionadas como uma string
+   // Constrói a string do array para inserção
+    StringBuilder arrayString = new StringBuilder();
+    arrayString.append("[");
+    for (int i = 0; i < idsAtividades.length; i++) {
+        arrayString.append(idsAtividades[i]);
+        if (i < idsAtividades.length - 1) {
+            arrayString.append(",");
+        }
+    }
+    arrayString.append("]");
+    
+    // Query SQL para inserção
+    String sql3 = "INSERT INTO atividadeevento (atividade, evento) VALUES (?, ?)";
+    PreparedStatement pstmt = conexao.prepareStatement(sql3);
+    pstmt.setString(1, arrayString.toString());
+    pstmt.setInt(2, novoID);
+    
+    // Executa a inserção
+    pstmt.executeUpdate();
+    pstmt.close();
+
     response.sendRedirect("../views/organizador/evento.jsp");
 %>

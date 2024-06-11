@@ -17,14 +17,6 @@
     stm.setInt( 2, vevento );
 
     stm.execute();
-    // Recupera o ID do evento recém-inserido
-    ResultSet rs = stm.getGeneratedKeys();
-    if (rs.next()) {
-        novoID = rs.getInt(1);
-    }
-
-    // Fecha os recursos
-    rs.close();
     stm.close();
     response.sendRedirect("../views/usuario/evento.jsp");
 %>

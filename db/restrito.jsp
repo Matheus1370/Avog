@@ -1,5 +1,3 @@
-
-
 <% 
     out.print("Conteudo de acesso restrito");
     out.print("<br><br>");
