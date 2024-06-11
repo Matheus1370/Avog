@@ -38,7 +38,7 @@
                         <span id="errorConfirmeSenha" class="spam"></span>
                     </div>
                     <div class="textfield">
-                    <label for="cargo">Cargo </label>
+                    <label class="textino" for="cargo">Cargo </label>
                     <select class="select" name="cargo" id="cargo">
                     <option value="">Selecione</option>
                     <option value="1">Presidente</option>
