@@ -40,14 +40,14 @@
                     <div class="textfield">
                     <label class="textino" for="cargo">Cargo </label>
                     <select class="select" name="cargo" id="cargo">
-                    <option value="">Selecione</option>
+                    <option value="0">Selecione</option>
                     <option value="1">Presidente</option>
                     <option value="2">Vice</option>
                     <option value="3">Secretário</option>
                     </select>
+                    <span id="errorCargo" class="spam"></span>
                     </div>
                         <p>Já possui uma conta? <a href="login.html" class="cadastre">Entrar</a></p>
-                     <span id="errorCargo" class="spam"></span>
                     <button class="btn-login" onclick="verificar()">SALVAR</button>
                     <a href="perfil_org.jsp" class="voltar">Voltar</a>
                 </div>

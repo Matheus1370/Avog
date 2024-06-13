@@ -4,6 +4,7 @@ function verificar(){
     var nome = document.getElementById("nome");
     var email = document.getElementById("email");
     var senha = document.getElementById("senha");
+    var confirmeSenha = document.getElementById("confirmeSenha");
     var cargo = document.getElementById("cargo");
 
     if( nome.value.length == 0){
@@ -38,7 +39,7 @@ function verificar(){
         confirmeSenha.style.borderBottomColor = "red";
     }
 
-    if( cargo.value == ""){
+    if( cargo.value == "" || cargo.value == "0"){
         enviar = false;
         document.querySelector("#errorCargo").textContent = "Selecione um cargo";
         cargo.style.borderBottomColor = "red";
@@ -57,10 +58,5 @@ function Limpar(){
     document.querySelector("#errorConfirmeSenha").textContent = "";
     document.querySelector("#errorCargo").textContent = "";
 
-    nome.style.borderBottomColor = "#00ff2a";
-    email.style.borderBottomColor = "#00ff2a";
-    senha.style.borderBottomColor = "#00ff2a";
-    confirmeSenha.style.borderBottomColor = "#00ff2a";
-    cargo.style.borderBottomColor = "#00ff2a";
     
 }
