@@ -1,3 +1,22 @@
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+var emailError = getParameterByName('emailError');
+if (emailError === 'true') {
+    // Se houver um erro de login, mostra a mensagem de erro
+    var errorSpan = document.getElementById('errorEmailURL');
+    if (errorSpan) {
+    errorSpan.textContent = 'Email já foi cadastrado.';
+    errorSpan.style.display = 'flex';
+    }
+}
+
 function verificar(){
     Limpar();
     var enviar = true;

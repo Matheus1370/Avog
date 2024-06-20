@@ -8,23 +8,25 @@ body{
 body * {
     box-sizing: border-box;
 }
+body{
+    background: rgb(31, 34, 45);
+}
 
 .main-login{
     width: 100%;
-    height: 140vh;
-    background: rgb(31, 34, 45);
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 70px 0 0 0;
 }
 
 .right-login{
     width: 50vw;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-left: 20px;
 }
 
 .right-login > h1 {
@@ -37,7 +39,6 @@ img .voli{
 
 .left-login{
     width: 60vw;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;

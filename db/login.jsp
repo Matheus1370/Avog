@@ -1,4 +1,5 @@
 <%@ page import="java.sql.*, java.time.*, java.util.*" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ include file="conexao.jsp" %>
 
 <%

@@ -1,6 +1,6 @@
-<%@ page import="java.sql.*, java.time.*, java.util.*" %>
-<%@ include file="../../db/conexao.jsp" %>
+<%@ page import="java.sql.*, java.time.*, java.text.*, java.util.List, java.util.Arrays, java.util.ArrayList" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ include file="../../db/conexao.jsp" %>
 <% if(session.getAttribute("organizador_id") == null ){response.sendRedirect("../../db/restrito.jsp");}%>
 
 <!DOCTYPE html>
@@ -9,7 +9,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AVOG - Cadastro Organizador</title>
-    <link rel="stylesheet" href="../../css/organizador/cadAdmin.css">
     <link rel="stylesheet" href="../../css/components/footer.css"> 
     <link rel="stylesheet" href="../../css/login.css">
 </head>
@@ -26,6 +25,7 @@
                         <label for="email">Email</label>
                         <input type="text" name="email" id="email" placeholder="Digite seu email...">
                         <span id="errorEmail" class="spam"></span>
+                        <span id="errorEmailURL" class="spam" style="display: none;"></span>
                     </div>
                     <div class="textfield">
                         <label for="email">Senha</label>
@@ -47,8 +47,8 @@
                     </select>
                     <span id="errorCargo" class="spam"></span>
                     </div>
-                        <p>Já possui uma conta? <a href="login.html" class="cadastre">Entrar</a></p>
-                    <button class="btn-login" onclick="verificar()">SALVAR</button>
+                    <p>Já possui uma conta? <a href="login.html" class="cadastre">Entrar</a></p>
+                    <input type="button" class="btn-login" onclick="verificar()" value="SALVAR">
                     <a href="perfil_org.jsp" class="voltar">Voltar</a>
                 </div>
                 <div class="right-login">

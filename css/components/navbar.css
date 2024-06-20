@@ -81,12 +81,24 @@ header {
 }
 
 .nav-link {
+    border: transparent;
     text-decoration: none;
     font-size: 1.15rem;
     color: #fff;
     font-weight: 400;
+    padding-bottom: 4px;
+    transition: .3s ease;
 }
 
+.nav-link:hover{
+    border-bottom: 1px solid #0187a7;
+}
+
+.nav-link.active {
+    pointer-events: none;
+    border-bottom: 1px solid #0187a7;
+    cursor: not-allowed;
+}
 .login-button{
     display: flex;
     justify-content: center;

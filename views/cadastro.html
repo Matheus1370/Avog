@@ -22,6 +22,7 @@
                     <label for="email">Email</label>
                     <input type="text" name="email" id="email" placeholder="Digite seu email...">
                     <span id="errorEmail" class="spam"></span>
+                    <span id="errorEmailURL" class="spam" style="display: none;"></span>
                 </div>
                 <div class="textfield">
                     <label for="email">Senha</label>
@@ -34,7 +35,7 @@
                     <span id="errorConfirmeSenha" class="spam"></span>
                     <p>Já possui uma conta? <a href="login.html" class="cadastre">Entrar</a></p>
                 </div>
-                <button class="btn-login" onclick="verificar()">CADASTRAR</button>
+                <input type="button" class="btn-login" onclick="verificar()" value="CADASTRAR">
                 <a href="index.html" class="voltar">Voltar</a>
             </div>
             <div class="right-login">
