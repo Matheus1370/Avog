@@ -38,14 +38,8 @@
     </div>
     
     <jsp:include page="components/eventoAtv.jsp" />
-
     <jsp:include page="components/eventoEnc.jsp" />
-    
     <jsp:include page="components/meuEvento.jsp" />
-
-    
-
-    
 
     <script type="text/javascript" src="../../js/validacoes/usuario/evento.js"></script>
 </body>
