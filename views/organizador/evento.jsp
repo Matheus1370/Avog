@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/components/navbar.css">
     <link rel="stylesheet" type="text/css" href="../../css/components/footer.css">
     <link rel="stylesheet" href="../../css/usuario/eventoUser.css">
+    <link rel="stylesheet" href="../../css/login.css">
     <style>
         .evento {
             display: none;

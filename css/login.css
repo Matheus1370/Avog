@@ -7,17 +7,15 @@ body{
 
 body{
     background: rgb(31, 34, 45);
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .main-login{
+    margin: auto;
     width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 70px 0 0 0;
+    padding-top: 50px;
 }
 
 .right-login{width: 100%;
