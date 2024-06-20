@@ -51,10 +51,10 @@
                     <input type="button" class="btn-login" onclick="verificar()" value="SALVAR">
                     <a href="perfil_org.jsp" class="voltar">Voltar</a>
                 </div>
-                <div class="right-login">
-                    <h1>Faça seu cadastro como Administrador!!</h1>
-                    <img class="voli" src="../../source/banners/admin-animate.svg" alt="Volei">
-                </div>
+            </div>
+            <div class="right-login">
+                <h1>Faça seu cadastro como Administrador!!</h1>
+                <img class="voli" src="../../source/banners/admin-animate.svg" alt="Volei">
             </div>
         </form>
         <script src="../../js/validacoes/organizador/cadAdmin.js"></script>

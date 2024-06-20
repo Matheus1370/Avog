@@ -5,23 +5,22 @@ body{
     font-family: 'Noto Sans', sans-serif;
 }
 
-body * {
-    box-sizing: border-box;
-}
 body{
     background: rgb(31, 34, 45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-login{
-    width: 100%;
+    width: 80%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin: 70px 0 0 0;
 }
 
-.right-login{
-    width: 50vw;
+.right-login{width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,18 +33,18 @@ body{
 }
 
 img .voli{
-   width: 30vw;
+   max-width: 100%;
 }
 
 .left-login{
-    width: 60vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .card-link{
-    width: 60%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,11 +129,11 @@ p{
 
 @media only screen and (max-width: 950px){
     .card-link{
-        width: 85%;
+        width: 70%;
     }
 }
  
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 650px){
     .main-login{
         flex-direction: column;
     }
@@ -146,7 +145,7 @@ p{
         right: auto;
     }
     .left-login{
-        width: 100%;
+        width: 80%;
         right: auto;
     }
     .voli{
