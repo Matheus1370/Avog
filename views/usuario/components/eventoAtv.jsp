@@ -86,7 +86,7 @@
                             %>
                     <input type="hidden" name="id_evento" id="id_evento" value="<%= dados.getString("id_evento") %>">
                     <% if(rss3.next()){%>
-                        <input type="submit" class="btn-login active" value="Participar">
+                        <input type="submit" class="btn-login active" value="Cadsatrado">
                     <% }else{%>
                         <input type="submit" class="btn-login" value="Participar">
                     <% }%>
