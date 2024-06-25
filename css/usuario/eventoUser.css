@@ -5,6 +5,19 @@
     margin-bottom: 30px;
 }
 
+#mensagemCard {
+    display: none;
+    align-items: center;
+}
+.eventoCard{
+    max-width: 257px;
+    text-align: center;
+    margin: auto;
+}
+#mensagemCard span{
+    color: rgb(0, 211, 0);
+}
+
 .sub_nav #titulos {
     display: flex;
     justify-content: space-between;

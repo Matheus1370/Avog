@@ -36,6 +36,10 @@
         </div>
         <div id="search"></div>
     </div>
+    <!-- Mensagem que retorna se o cadastro foi realizado com sucesso -->
+    <div id="mensagemCard" class="eventoCard">
+        <span id="mensagem"></span>
+    </div>
     
     <jsp:include page="components/eventoAtv.jsp" />
     <jsp:include page="components/eventoEnc.jsp" />
