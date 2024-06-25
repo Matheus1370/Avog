@@ -7,6 +7,19 @@ function getParameterByName(name, url) {
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
+var mostrarCard = getParameterByName('mostrarCard');
+if (mostrarCard === 'true') {
+    // Se houver um erro de login, mostra a mensagem de erro
+    var mensagemCard = document.getElementById('mensagemCard');
+    if (mensagemCard) {
+        mensagemCard.style.display = 'flex';
+        var mensagem= document.getElementById('mensagem');
+        mensagem.textContent = 'Cadastro realizado com sucesso!';
+        setTimeout(function() {
+            mensagemCard.style.display = 'none';
+        }, 3000); // 3 segundos
+    }
+}
 var loginError = getParameterByName('loginError');
 if (loginError === 'true') {
 // Se houver um erro de login, mostra a mensagem de erro

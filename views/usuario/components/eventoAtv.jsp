@@ -76,8 +76,20 @@
                 %>
                 </p>
                 <form action="../../db/cadUsuEvento.jsp" method="post">
+                    <% String sql3 = "SELECT * FROM usuarioevento where evento = ? and usuario = ?";
+                            PreparedStatement pstmtt3 = conexao.prepareStatement(sql3);
+                            int eventoid = Integer.parseInt(dados.getString("id_evento"));
+                            int usuarioid = Integer.parseInt(session.getAttribute("usuario_id").toString());
+                            pstmtt3.setInt(1, eventoid); 
+                            pstmtt3.setInt(2, usuarioid); 
+                            ResultSet rss3 = pstmtt3.executeQuery(); 
+                            %>
                     <input type="hidden" name="id_evento" id="id_evento" value="<%= dados.getString("id_evento") %>">
-                    <button type="submit">Participar</button>
+                    <% if(rss3.next()){%>
+                        <input type="submit" class="btn-login active" value="Participar">
+                    <% }else{%>
+                        <input type="submit" class="btn-login" value="Participar">
+                    <% }%>
                 </form>
             </div>
         <% } %>

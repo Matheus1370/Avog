@@ -13,9 +13,15 @@
     <link rel="stylesheet" href="../../css/login.css">
 </head>
 <body>
+        <!-- Formulário que cadastra o evento -->
         <form class="main-login" action="../../db/cadAdmin.jsp" name="form1" method="post">
             <div class="left-login ">
                 <div class="card-link">
+                    <!-- -->
+                    <!-- Mensagem que retorna se o cadastro foi realizado com sucesso -->
+                    <div id="mensagemCard" class="textfield">
+                        <span id="mensagem"></span>
+                    </div>
                     <div class="textfield">
                         <label for="email">Nome</label>
                         <input type="text" name="nome" id="nome" placeholder="Digite seu nome...">
@@ -47,9 +53,8 @@
                     </select>
                     <span id="errorCargo" class="spam"></span>
                     </div>
-                    <p>Já possui uma conta? <a href="login.html" class="cadastre">Entrar</a></p>
                     <input type="button" class="btn-login" onclick="verificar()" value="SALVAR">
-                    <a href="perfil_org.jsp" class="voltar">Voltar</a>
+                    <a href="home.jsp" class="voltar">Voltar</a>
                 </div>
             </div>
             <div class="right-login">

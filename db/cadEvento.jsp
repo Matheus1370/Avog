@@ -83,5 +83,5 @@
     pstmt.executeUpdate();
     pstmt.close();
 
-    response.sendRedirect("../views/organizador/evento.jsp");
+    response.sendRedirect("../views/organizador/evento.jsp?mostrarCard=true");
 %>

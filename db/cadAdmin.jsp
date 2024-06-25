@@ -31,7 +31,7 @@
 
         stm.execute();
         stm.close();
-        response.sendRedirect("../views/organizador/cadAdmin.jsp");
+        response.sendRedirect("../views/organizador/cadAdmin.jsp?mostrarCard=true");
     }
 
 

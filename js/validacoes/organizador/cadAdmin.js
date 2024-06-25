@@ -16,6 +16,19 @@ if (emailError === 'true') {
     errorSpan.style.display = 'flex';
     }
 }
+var mostrarCard = getParameterByName('mostrarCard');
+if (mostrarCard === 'true') {
+    // Se houver um erro de login, mostra a mensagem de erro
+    var mensagemCard = document.getElementById('mensagemCard');
+    if (mensagemCard) {
+        mensagemCard.style.display = 'flex';
+        var mensagem= document.getElementById('mensagem');
+        mensagem.textContent = 'Cadastro realizado com sucesso!';
+        setTimeout(function() {
+            mensagemCard.style.display = 'none';
+        }, 3000); // 3 segundos
+    }
+}
 
 function verificar(){
     Limpar();

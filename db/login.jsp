@@ -25,12 +25,12 @@
     {
        session.setAttribute( "usuario_id"  ,  dados.getString("id_usu")  ) ;
        session.setAttribute( "usuario_nome"  ,  dados.getString("nome")  ) ;
-       response.sendRedirect("../views/usuario/perfil_usu.jsp");
+       response.sendRedirect("../views/usuario/home.jsp");
     }else if(dados2.next())
     {
        session.setAttribute( "organizador_id"  ,  dados2.getString("id_org")  ) ;
        session.setAttribute( "organizador_nome"  ,  dados2.getString("nome")  ) ;
-       response.sendRedirect("../views/organizador/perfil_org.jsp");
+       response.sendRedirect("../views/organizador/home.jsp");
     }
     else
     {

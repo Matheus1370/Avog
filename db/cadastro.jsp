@@ -29,7 +29,7 @@
         stm.execute();
         stm.close();
 
-        response.sendRedirect("../views/login.html");
+        response.sendRedirect("../views/login.html?mostrarCard=true");
     }
     
 %>
