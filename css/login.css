@@ -18,6 +18,19 @@ body{
     padding-top: 50px;
 }
 
+#mensagemCard {
+    display: none;
+    align-items: center;
+}
+.eventoCard{
+    max-width: 244.5px;
+    text-align: center;
+    margin: auto;
+}
+#mensagemCard span{
+    color: rgb(0, 211, 0);
+}
+
 .right-login{width: 100%;
     display: flex;
     justify-content: center;

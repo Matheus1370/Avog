@@ -31,7 +31,7 @@
             <br>
                 </div>
             
-                <div class="textfield">
+                <div class="wrapper">
             <%
                 String cst = "SELECT * FROM atividade;";
                 PreparedStatement sttm = conexao.prepareStatement(cst);
@@ -40,7 +40,10 @@
                     String atividade = rs.getString("nome");
                     String atividade_id = rs.getString("id_ativ");
                 %>
-                    <input type="checkbox" name="atividade" value="<%= atividade_id %>"><%= atividade %><br>
+                    <div class="form-group">
+                        <input type="checkbox" class="checkbox" id="checkbox<%= atividade_id %>" name="atividade" value="<%= atividade_id %>"/>
+                        <label for="checkbox<%= atividade_id %>"><%= atividade %></label>
+                    </div>
                 <% }%><br>
                 </div>
             <input type="button" onclick="verificar()" value="Salvar">

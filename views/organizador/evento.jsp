@@ -12,6 +12,7 @@
     <title>AVOG - Evento</title>
     <link rel="stylesheet" type="text/css" href="../../css/components/navbar.css">
     <link rel="stylesheet" type="text/css" href="../../css/components/footer.css">
+    <link rel="stylesheet" type="text/css" href="../../css/components/checkbox.css">
     <link rel="stylesheet" href="../../css/usuario/eventoUser.css">
     <link rel="stylesheet" href="../../css/login.css">
     <style>
@@ -37,7 +38,12 @@
         </div>
         <div id="search"></div>
     </div>
+    <!-- Mensagem que retorna se o cadastro foi realizado com sucesso -->
+    <div id="mensagemCard" class="eventoCard">
+        <span id="mensagem"></span>
+    </div>
 
+    <!--Inclusão de componentes: eventos ativados, encerrados e criar evento -->
     <jsp:include page="components/eventoAtv.jsp" />
     <jsp:include page="components/eventoEnc.jsp" />
     <jsp:include page="components/criarEvento.jsp" />
