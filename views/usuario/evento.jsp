@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/components/navbar.css">
     <link rel="stylesheet" type="text/css" href="../../css/components/footer.css">
     <link rel="stylesheet" href="../../css/usuario/eventoUser.css">
+    <script src="../../js/navbar.js"></script>
     <style>
         .evento {
             display: none;
@@ -41,6 +42,7 @@
         <span id="mensagem"></span>
     </div>
     
+    <!--Inclusão de componentes: eventos ativados, encerrados e meus eventos -->
     <jsp:include page="components/eventoAtv.jsp" />
     <jsp:include page="components/eventoEnc.jsp" />
     <jsp:include page="components/meuEvento.jsp" />

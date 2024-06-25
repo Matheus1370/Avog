@@ -24,6 +24,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/components/navbar.css">
     <link rel="stylesheet" type="text/css" href="../../css/components/footer.css">
     <link rel="stylesheet" href="../../css/perfilusu.css">
+    <script src="../../js/navbar.js"></script>
     <style>
         .evento {
             display: none;

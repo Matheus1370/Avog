@@ -128,6 +128,15 @@ header {
 }
 
 @media screen and (max-width: 900px) {
+    .nav-link:hover{
+        border: none;
+    }
+
+    .nav-link.active {
+        pointer-events: none;
+        cursor: not-allowed;
+        border: none;
+    }
     .nav-bar {
         padding: .5rem 2rem;
     }
@@ -173,6 +182,18 @@ header {
         padding-top: 1.2rem;
         padding-bottom: .5rem;
         border-bottom: 1px solid rgb(33, 53, 122);
+    }
+    .mobile-menu .nav-item:hover {
+        border-bottom: 1px solid #0187a7;
+        transition: .3s ease;
+    }
+
+    .mobile-menu .nav-item.active {
+        display: block;
+        width: 80%;
+        padding-top: 1.2rem;
+        padding-bottom: .5rem;
+        border-bottom: 1px solid #0187a7;
     }
 
     .mobile-menu .login-button {

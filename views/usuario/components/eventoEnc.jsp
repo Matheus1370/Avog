@@ -4,18 +4,17 @@
 <div id="eventoEnc" class="evento">
     <% 
         int usuarioId = Integer.parseInt(session.getAttribute("usuario_id").toString());
-        // Obter a data atual
-        LocalDate currentDate = LocalDate.now();
-        String date = currentDate.toString();
-        java.sql.Date currentDateSql = java.sql.Date.valueOf(currentDate);
+        
+        LocalDate currentDate = LocalDate.now();// Obter a data atual
+        String date = currentDate.toString();// Converter para String no formato YYYY-MM-DD
+        java.sql.Date currentDateSql = java.sql.Date.valueOf(currentDate);// Converter para a data para a linguagem SQL
 
-        // Consulta para buscar os eventos associados ao usuário
-        String consulta2 = "SELECT * FROM usuarioevento WHERE usuario = ?;";
+        String consulta2 = "SELECT * FROM usuarioevento WHERE usuario = ?;";// Consulta para buscar os eventos associados ao usuário
         PreparedStatement stm2 = conexao.prepareStatement(consulta2);
         stm2.setInt(1, usuarioId);
         ResultSet dados2 = stm2.executeQuery();
 
-        String consulta3 = "SELECT * FROM evento WHERE id_evento = ? and data < ?;";
+        String consulta3 = "SELECT * FROM evento WHERE id_evento = ? and data < ?;";// consulta do evento que o usuário estava cadastrado e já foi encerrado
         PreparedStatement stm3 = conexao.prepareStatement(consulta3);
         stm3.setDate(2, java.sql.Date.valueOf(date));
         SimpleDateFormat sdfFormatado = new SimpleDateFormat("dd/MM/yyyy");
@@ -25,6 +24,7 @@
             ResultSet dados3 = stm3.executeQuery();
 
             while (dados3.next()) {
+                //Formatando a data recuperada do banco
                 String databanco2 = dados3.getString("data");
                 Date data2 = java.sql.Date.valueOf(databanco2);
                 String dataFormatada2 = sdfFormatado.format(data2);

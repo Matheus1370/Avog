@@ -33,6 +33,7 @@
             
                 <div class="wrapper">
             <%
+                //Lista de atividades que um evento pode ter
                 String cst = "SELECT * FROM atividade;";
                 PreparedStatement sttm = conexao.prepareStatement(cst);
                 ResultSet rs = sttm.executeQuery();

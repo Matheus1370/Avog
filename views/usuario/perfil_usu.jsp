@@ -4,7 +4,7 @@
 <% if(session.getAttribute("usuario_id") == null ){response.sendRedirect("../../db/restrito.jsp");}%>
 <% 
     int idUsuario = Integer.parseInt(session.getAttribute("usuario_id").toString()); 
-    //Busca os eventos da data atual e datas seguintes
+    //Busca os dados do usuário
     String consulta = "select * from usuario where id_usu = ?;";
     //Cria o statement para executar o comando no banco
     PreparedStatement stm = conexao.prepareStatement(consulta);
@@ -22,6 +22,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/components/navbar.css">
     <link rel="stylesheet" type="text/css" href="../../css/components/footer.css">
     <link rel="stylesheet" href="../../css/perfilusu.css">
+    <script src="../../js/navbar.js"></script>
     <style>
         .evento {
             display: none;

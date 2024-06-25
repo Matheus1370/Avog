@@ -4,11 +4,11 @@
 <div id="eventoAtv" class="evento">
     <%
         // Obter a data atual
-        LocalDate currentDate = LocalDate.now();
-        String date = currentDate.toString();
-        java.sql.Date currentDateSql = java.sql.Date.valueOf(currentDate);
+        LocalDate currentDate = LocalDate.now();// Obter a data atual
+        String date = currentDate.toString();// Converter para String no formato YYYY-MM-DD
+        java.sql.Date currentDateSql = java.sql.Date.valueOf(currentDate);// Converter para a data para a linguagem SQL
 
-        String consulta = "SELECT * FROM evento WHERE data >= ?;";
+        String consulta = "SELECT * FROM evento WHERE data >= ?;";//Busca os eventos da data atual e datas seguintes
         PreparedStatement stm = conexao.prepareStatement(consulta);
         stm.setDate(1, java.sql.Date.valueOf(date));
         ResultSet dados = stm.executeQuery();
@@ -16,6 +16,7 @@
     %>
     <div class="caixa">
         <% while (dados.next()) { 
+            //Formatando a data recuperada do banco
             String databanco = dados.getString("data");
             Date data = java.sql.Date.valueOf(databanco);
             String dataFormatada = sdfFormatado.format(data);%>
@@ -30,14 +31,13 @@
                 <p><%= dados.getString("hora") %></p>
                 <p>
                 <% 
-                    // Recuperar o ID do evento desejado
-                    int idEvento = Integer.parseInt(dados.getString("id_evento")); // Neste caso, vamos supor que o ID do evento desejado seja 5
-                    List<Integer> arrayFromDB = new ArrayList<>();
+                    int idEvento = Integer.parseInt(dados.getString("id_evento")); 
+                    List<Integer> arrayFromDB = new ArrayList<>();// Cria um array para armazenar a lista de atividades 
                     
                     // Consulta SQL para recuperar os nomes das atividades associadas ao evento
                     String sql = "SELECT atividade FROM atividadeevento where evento = ?";
                     PreparedStatement pstmtt = conexao.prepareStatement(sql);
-                    pstmtt.setInt(1, idEvento); // Definir o ID do evento como parâmetro
+                    pstmtt.setInt(1, idEvento);
                     ResultSet rss = pstmtt.executeQuery();
                     
                     while (rss.next()) {
@@ -73,21 +73,22 @@
                 </ul>
 
                 <%
-                    // Fechar os recursos (ResultSet e PreparedStatement)
                     rss.close();
                     pstmtt.close();
                 %>
                 </p>
                 <form action="../../db/cadUsuEvento.jsp" method="post">
-                    <% String sql3 = "SELECT * FROM usuarioevento where evento = ? and usuario = ?";
-                            PreparedStatement pstmtt3 = conexao.prepareStatement(sql3);
-                            int eventoid = Integer.parseInt(dados.getString("id_evento"));
-                            int usuarioid = Integer.parseInt(session.getAttribute("usuario_id").toString());
-                            pstmtt3.setInt(1, eventoid); 
-                            pstmtt3.setInt(2, usuarioid); 
-                            ResultSet rss3 = pstmtt3.executeQuery(); 
-                            %>
-                    <input type="hidden" name="id_evento" id="id_evento" value="<%= dados.getString("id_evento") %>">
+                    <% 
+                        // validação para que o usuário em um evento duas vezes
+                        String sql3 = "SELECT * FROM usuarioevento where evento = ? and usuario = ?";
+                        PreparedStatement pstmtt3 = conexao.prepareStatement(sql3);
+                        int eventoid = Integer.parseInt(dados.getString("id_evento"));
+                        int usuarioid = Integer.parseInt(session.getAttribute("usuario_id").toString());
+                        pstmtt3.setInt(1, eventoid); 
+                        pstmtt3.setInt(2, usuarioid); 
+                        ResultSet rss3 = pstmtt3.executeQuery(); 
+                        %>
+                        <input type="hidden" name="id_evento" id="id_evento" value="<%= dados.getString("id_evento") %>">
                     <% if(rss3.next()){%>
                         <input type="submit" class="btn-login active" value="Cadsatrado">
                     <% }else{%>

@@ -5,18 +5,18 @@
     <%
         int usuarioId = Integer.parseInt(session.getAttribute("usuario_id").toString());
 
-        LocalDate currentDate = LocalDate.now();
-        String date = currentDate.toString();
-        java.sql.Date currentDateSql = java.sql.Date.valueOf(currentDate);
+        LocalDate currentDate = LocalDate.now();// Obter a data atual
+        String date = currentDate.toString();// Converter para String no formato YYYY-MM-DD
+        java.sql.Date currentDateSql = java.sql.Date.valueOf(currentDate);// Converter para a data para a linguagem SQL
+        SimpleDateFormat sdfFormatado = new SimpleDateFormat("dd/MM/yyyy");// Converte para dd/MM/yyyy
 
-        String consulta4 = "SELECT * FROM usuarioevento WHERE usuario = ?;";
+        String consulta4 = "SELECT * FROM usuarioevento WHERE usuario = ?;";// Consulta para buscar os eventos associados ao usuário
         PreparedStatement stm4 = conexao.prepareStatement(consulta4);
         stm4.setInt(1, usuarioId);
         ResultSet dados4 = stm4.executeQuery();
 
-        String consulta5 = "SELECT * FROM evento WHERE id_evento = ? and  data >= ?;";
+        String consulta5 = "SELECT * FROM evento WHERE id_evento = ? and  data >= ?;";// consulta do evento que o usuário está cadastrado e ainda está ativo
         PreparedStatement stm5 = conexao.prepareStatement(consulta5);
-        SimpleDateFormat sdfFormatado = new SimpleDateFormat("dd/MM/yyyy");
 
         while (dados4.next()) {
             int id_evento = dados4.getInt("evento");
@@ -25,6 +25,7 @@
             ResultSet dados5 = stm5.executeQuery();
 
             while (dados5.next()) {
+                //Formatando a data recuperada do banco
                 String databanco3 = dados5.getString("data");
                 Date data3 = java.sql.Date.valueOf(databanco3);
                 String dataFormatada3 = sdfFormatado.format(data3);

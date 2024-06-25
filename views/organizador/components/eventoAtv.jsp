@@ -3,12 +3,9 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <div id="eventoAtv" class="evento">
     <%
-        // Obter a data atual
-        LocalDate currentDate = LocalDate.now();
+        LocalDate currentDate = LocalDate.now();// Obter a data atual
         String date = currentDate.toString(); // Converter para String no formato YYYY-MM-DD
-        //Busca os eventos da data atual e datas seguintes
-        String consulta = "select * from evento where data >= ?;";
-        //Cria o statement para executar o comando no banco
+        String consulta = "select * from evento where data >= ?;";//Busca os eventos da data atual e datas seguintes
         PreparedStatement stm = conexao.prepareStatement(consulta);
         stm.setDate(1, java.sql.Date.valueOf(date));
         ResultSet dados = stm.executeQuery();
@@ -16,6 +13,7 @@
     %>
     <div class="caixa">
         <% while(dados.next()) {
+            //Formatando a data recuperada do banco
             String databanco = dados.getString("data");
             Date data = java.sql.Date.valueOf(databanco);
             String dataFormatada = sdfFormatado.format(data);
@@ -29,9 +27,8 @@
                 <p><%= dados.getString("hora") %></p>
                 <p>
                 <% 
-                    // Recuperar o ID do evento desejado
-                    int idEvento = Integer.parseInt(dados.getString("id_evento")); // Neste caso, vamos supor que o ID do evento desejado seja 5
-                    List<Integer> arrayFromDB = new ArrayList<>();
+                    int idEvento = Integer.parseInt(dados.getString("id_evento"));
+                    List<Integer> arrayFromDB = new ArrayList<>(); // Cria um array para armazenar a lista de atividades 
                     
                     // Consulta SQL para recuperar os nomes das atividades associadas ao evento
                     String sql = "SELECT atividade FROM atividadeevento where evento = ?";

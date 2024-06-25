@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/components/checkbox.css">
     <link rel="stylesheet" href="../../css/usuario/eventoUser.css">
     <link rel="stylesheet" href="../../css/login.css">
+    <script src="../../js/navbar.js"></script>
     <style>
         .evento {
             display: none;
