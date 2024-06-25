@@ -9,7 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AVOG - Cadastro Organizador</title>
+    <title>AVOG - Home</title>
     <link rel="stylesheet" type="text/css" href="../../css/components/navbar.css">
     <link rel="stylesheet" type="text/css" href="../../css/components/footer.css">
     <link rel="stylesheet" href="../../css/perfilusu.css">
@@ -23,11 +23,9 @@
 <body>
     <jsp:include page="components/navbar.jsp" />
 
-    <main>
-        <div class="titulo">
-            <h1>Home</h1>
-        </div>
-    </main>
+    <div id="banner" class="banner">
+        <img src="../../source/banners/banner_entrada.svg" alt="Imagem_Entrada">
+    </div>
 </body>
 
 </html>
