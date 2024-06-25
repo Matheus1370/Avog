@@ -21,8 +21,11 @@
             String dataFormatada = sdfFormatado.format(data);%>
 
             <div class="card">
+                <h3> Nome do evento:</h3>
                 <p><%= dados.getString("nome") %></p>
+                <h3> Descrição do evento:</h3>
                 <p><%= dados.getString("descricao") %></p>
+                <h3> Data do evento:</h3>
                 <p><%= dataFormatada %></p>
                 <p><%= dados.getString("hora") %></p>
                 <p>
